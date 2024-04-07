@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About MVC{% endblock %}
+
+{% block body %}
+    <div class="about-container" style="display: flex;">
+        <div class="left-column" style="flex: 1;">
+            <h2>About the MVC Course</h2>
+            <p>Kursen "Objektorienterade webbteknologier", även känd som MVC, dyker djupt ner i objektorienterad programmering med PHP.
+            Tänk dig en resa genom PHP:s objektorienterade landskap, där du får utforska klassiska OOP-koncept, ramverksbaserad utveckling och databashantering.</p>
+            <div style="text-align: center;"> 
+                <a href="{{ courseGitRepo }}">Course Git Repo</a>
+            </div>
+        </div>
+        <div class="right-column" style="flex: 1;">
+            <br>
+            <div class="image-container">
+                <img src="{{ asset('images/mvc-course.jpeg') }}" alt="MVC Course Image">
+            </div>
+            <br>
+            <div style="text-align: center;"> 
+                <a href="{{ myGitRepo }}">My Git Repo</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

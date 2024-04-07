@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Report{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Course Report</h1>
+        <div class="image-container">
+            <img src="{{ asset('images/report-cover.jpeg') }}" alt="Report Cover">
+        </div>
+        <br>
+
+        <nav>
+            <ul>
+                <li><a href="#kmom01">Kmom01</a></li>
+                <li><a href="#kmom02">Kmom02</a></li>
+                <li><a href="#kmom03">Kmom03</a></li>
+                <li><a href="#kmom04">Kmom04</a></li>
+                <li><a href="#kmom05">Kmom05</a></li>
+                <li><a href="#kmom06">Kmom06</a></li>
+                <li><a href="#kmom10">Kmom10</a></li>
+            </ul>
+        </nav>
+
+        <section id="kmom01">
+            <h2>Kmom01</h2>
+            
+            <h3>Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering.</h3>
+            <p>
+                När det gäller objektorientering så har jag läst ungefär 100 böcker kring programmering och datavetenskap senaste året, många av vilka inkluderade kapitel om objektorientering.
+                Utöver detta har jag försökt applicera objektorientering i de projekt jag skrivit för egen användning i Python.
+                Sedan har objektorientering applicerats under de olika kurserna som jag har tagit.
+            </p>
+            
+            <h3>Berätta kort om PHPs modell för klasser och objekt. Vilka är de grunder man behöver veta/förstå för att kunna komma igång och skapa sina första klasser?</h3>
+            <p>
+                Det man behöver känna till är väl det generella att en klass är ett recept för objekt och ett objekt är en instans av en klass.
+                En klass kan ha attribut och metoder där attribut innehåller värden och metoder innehåller processer/beteenden.
+                Man bör väl också känna till skillnaden och innebörden av publika och privata attribut/metoder.
+                T.ex. att man vill hålla sig till privata så mycket som möjligt. Eftersom att externa användare av en klass blir beroende på klassens publika metoder/attribut och dessa är inga man kan kontrollera. Så det är viktigt att det som är publikt har en låg sannolikhet att behöva förändras.
+            </p>
+            
+            <h3>Reflektera kort över den kodbas, koden, strukturen som användes till uppgiften me/report, hur uppfattar du den?</h3>
+            <p>
+                Personligen så gillar jag att minimera externa dependencies, och gillar därför språk som t.ex. Python med ett rejält basbibliotek där man kan utveckla väldigt mycket utan att behöver comitta till ett specifikt framework.
+                Jag blir lite nervös av en massa mappar och filer som genereras av ramverk, i alla fall om det är ett personligt projekt som jag vet att jag kommer jobba på i månader/år framöver.
+                Men i slutändan går det inte att undvika vid utveckling av komplicerade webbappar tänker jag.
+                Men gällande kodbasen för denna uppgift så är den än så länge indelad i Controller och View (templates mappen). Dock så finns det väl inte riktigt en separat Model-del än så länge.
+                Jag ser fram emot att arbeta med MVC-modellen i kursen då jag försökt applicera tänket för ett interface för ett av mina personliga projekt.
+            </p>
+            
+            <h3>Med tanke på artikeln “PHP The Right Way”, vilka delar in den finner du extra intressanta och värdefulla? Är det några särskilda områden som du känner att du vill veta mer om? Lyft fram några delar av artikeln som du känner mer värdefulla.</h3>
+            <p>
+                När det gäller strategi så tycker jag att SOLID är intressant och vill bli duktig på att förstå och applicera dessa principer.
+            </p>
+            
+            <h3>Vilken är din TIL för detta kmom?</h3>
+            <p>
+                TIL för denna kmom är att komma igång med ett Symphony projekt med MVC-design (dock utan Model än så länge).
+            </p>
+        </section>
+
+        <section id="kmom02">
+            <h2>Kmom02</h2>
+            <!-- -->
+        </section>
+
+        <section id="kmom03">
+            <h2>Kmom03</h2>
+            <!-- -->
+        </section>
+
+        <section id="kmom04">
+            <h2>Kmom04</h2>
+            <!-- -->
+        </section>
+
+        <section id="kmom05">
+            <h2>Kmom05</h2>
+            <!-- -->
+        </section>
+
+        <section id="kmom06">
+            <h2>Kmom06</h2>
+            <!-- -->
+        </section>
+
+        <section id="kmom10">
+            <h2>Kmom10</h2>
+            <!-- -->
+        </section>
+    </div>
+{% endblock %}
