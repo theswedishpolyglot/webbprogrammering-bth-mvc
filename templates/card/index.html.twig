@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Card Game{% endblock %}
+
+{% block body %}
+    <h1>Card Game Dashboard</h1>
+    <p>Welcome to the card game of the Gods! Below is a brief overview of the structure and relationships of the classes used in this application.</p>
+
+    <h2>Class Structure</h2>
+    <p>
+        This application utilizes several classes to manage a card game:
+        <ul>
+            <li><strong>Card:</strong> Represents a single playing card, holding a suit and a value.</li>
+            <li><strong>DeckOfCards:</strong> Represents a full deck of cards. It manages a collection of Card objects and includes methods to shuffle and draw cards.</li>
+            <li><strong>CardHand:</strong> Represents a hand of cards. It can hold multiple Card objects drawn from a DeckOfCards.</li>
+        </ul>
+    </p>
+
+    <h3>Relationships</h3>
+    <p>
+        <ul>
+            <li><strong>DeckOfCards</strong> composes <strong>Card</strong> objects, managing them through an ArrayCollection.</li>
+            <li><strong>CardHand</strong> also composes <strong>Card</strong> objects, collecting cards that are drawn from a <strong>DeckOfCards</strong>.</li>
+        </ul>
+    </p>
+
+    <h2>UML Diagram</h2>
+    <p>Below is a UML diagram representing the relationships:</p>
+    <img src="{{ asset('images/report_kmom02_uml.svg') }}" alt="UML Diagram" style="width: 100%; max-width: 600px;">
+
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="{{ path('card_deck') }}">View Deck</a></li>
+        <li><a href="{{ path('card_shuffle') }}">Shuffle Deck</a></li>
+        <li><a href="{{ path('card_draw') }}">Draw One Card</a></li>
+        <li>
+            <form action="{{ path('card_draw_multiple') }}" method="get">
+                <input type="number" name="number" value="5" min="1" max="52">
+                <button type="submit">Draw Cards</button>
+            </form>
+        </li>
+    </ul>
+{% endblock %}

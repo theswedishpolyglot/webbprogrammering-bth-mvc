@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Draw Multiple Cards{% endblock %}
+
+{% block body %}
+    <h1>Multiple Cards Drawn</h1>
+    <div class="card-container">
+        {% for card in cards %}
+            <div class="card">
+                {{ card }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <form action="{{ path('card_draw_multiple') }}" method="get">
+        <input type="number" name="number" value="5" min="1" max="52">
+        <button type="submit">Draw More Cards</button>
+    </form>
+
+    <p>Cards remaining in the deck: {{ remaining }}</p>
+    <a href="{{ path('card_deck') }}">Back to Deck</a>
+
+    <h2>Previously Drawn Cards</h2>
+    {% if drawnCards is empty %}
+        <p>No cards have been drawn yet.</p>
+    {% else %}
+        <div class="card-container">
+            {% for cardString in drawnCards %}
+                <div class="card">
+                    {{ cardString }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}

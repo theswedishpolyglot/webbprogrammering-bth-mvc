@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Draw Cards{% endblock %}
+
+{% block body %}
+    <h1>Card Drawn</h1>
+    {% if card %}
+        <div class="card">
+            {{ card }}
+        </div>
+        <p>Cards remaining in the deck: {{ remaining }}</p>
+    {% else %}
+        <p>No card drawn or no cards left in the deck.</p>
+    {% endif %}
+    <a href="{{ path('card_deck') }}">Back to Deck</a>
+
+    <form action="{{ path('card_draw') }}" method="post">
+        <button type="submit" class="btn btn-primary">Draw Another Card</button>
+    </form>
+
+    <h2>Previously Drawn Cards</h2>
+    {% if drawnCards is empty %}
+        <p>No cards have been drawn yet.</p>
+    {% else %}
+        <div class="card-container">
+            {% for cardString in drawnCards %}
+                <div class="card">
+                    {{ cardString }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}

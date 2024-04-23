@@ -22,6 +22,7 @@ when@dev:
                 type: console
                 process_psr_3_messages: false
                 channels: ["!event", "!doctrine", "!console"]
+                level: debug
 
 when@test:
     monolog:

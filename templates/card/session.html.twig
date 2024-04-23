@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Session Contents{% endblock %}
+
+{% block body %}
+<h1>Session Contents</h1>
+
+{# Adding a button to delete the session #}
+<form action="{{ path('card_session_delete') }}" method="post">
+    <button type="submit" class="btn btn-danger">Delete Session</button>
+</form>
+
+{% if sessionData is empty %}
+    <p>The session is currently empty.</p>
+{% else %}
+    <div>
+        <h2>Session Data:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in sessionData %}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>
+                            {% if key == 'deck' %}
+                                {{ value.detailedString }}
+                            {% elseif value is iterable %}
+                                <ul>
+                                    {% for subkey, subvalue in value %}
+                                        <li>{{ subkey }}: {{ subvalue }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                {{ value }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endif %}
+{% endblock %}
