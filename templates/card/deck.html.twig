@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}View Deck{% endblock %}
+
+{% block body %}
+<h1>Current Deck</h1>
+<div class="card-container">
+    {% for card in deck %}
+    <div class="card">
+        {{ card }}
+    </div>
+    {% endfor %}
+</div>
+
+<form action="{{ path('card_shuffle') }}" method="post">
+    <button type="submit">Shuffle Deck</button>
+</form>
+{% endblock %}
