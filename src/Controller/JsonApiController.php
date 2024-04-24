@@ -39,11 +39,11 @@ class JsonApiController extends AbstractController
         $session->set('drawn_cards', []);
 
         $shuffledDeck = $deck->getCards()->toArray();
-    
-        $shuffledDeckArray = array_map(function($card) {
+
+        $shuffledDeckArray = array_map(function ($card) {
             return (string) $card;
         }, $shuffledDeck);
-    
+
         return $this->json([
             'deck' => $shuffledDeckArray,
         ]);
@@ -78,7 +78,7 @@ class JsonApiController extends AbstractController
         }
         $session->set('deck', $deck);
         $session->set('drawn_cards', $drawnCards);
-    
+
         return $this->json([
             'drawnCards' => array_map('strval', $cards),
             'remaining' => count($deck->getCards()),

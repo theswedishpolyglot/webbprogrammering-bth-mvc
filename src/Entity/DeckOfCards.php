@@ -64,13 +64,13 @@ class DeckOfCards
         usort($cardsArray, function ($cardA, $cardB) {
             $suitsOrder = ['Clubs' => 1, 'Diamonds' => 2, 'Hearts' => 3, 'Spades' => 4];
             $valuesOrder = array_flip(['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']);
-    
+
             if ($suitsOrder[$cardA->getSuit()] === $suitsOrder[$cardB->getSuit()]) {
                 return $valuesOrder[$cardA->getValue()] <=> $valuesOrder[$cardB->getValue()];
             }
             return $suitsOrder[$cardA->getSuit()] <=> $suitsOrder[$cardB->getSuit()];
         });
-    
+
         return $cardsArray;
     }
 

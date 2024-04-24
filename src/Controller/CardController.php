@@ -42,14 +42,14 @@ class CardController extends AbstractController
     public function deck(SessionInterface $session): Response
     {
         $deck = $session->get('deck', new DeckOfCards());
-    
+
         $sortedCards = $deck->getSortedCards();
-    
+
         return $this->render('card/deck.html.twig', [
             'deck' => $sortedCards,
         ]);
     }
-    
+
 
     #[Route('/card/deck/shuffle', name: 'card_shuffle', methods: ['POST', 'GET'])]
     public function shuffle(SessionInterface $session): Response
@@ -61,7 +61,7 @@ class CardController extends AbstractController
         $this->logger->info('Deck has been shuffled and the session cleared');
         $session->set('deck', $deck);
         $deckArray = $deck->getCards()->toArray();
-    
+
         return $this->render('card/shuffle.html.twig', [
             'deck' => $deckArray
         ]);
@@ -72,18 +72,18 @@ class CardController extends AbstractController
     {
         $deck = $this->ensureDeckExists($session);
         $this->logger->info('Attempting to draw a card. Current deck:', ['deck' => $deck->detailedString()]);
-        
+
         $card = $deck->drawCard($logger);
-    
+
         if ($card) {
             $this->logger->info('Card drawn:', ['card' => $card->__toString()]);
         } else {
             $this->logger->info('Failed to draw a card. No more cards or error.');
         }
-        
+
         $session->set('deck', $deck);
         $session->save();
-        
+
         $drawnCards = $session->get('drawn_cards', []);
         if ($card) {
             $drawnCards[] = (string) $card;
@@ -91,21 +91,21 @@ class CardController extends AbstractController
         } else {
             $this->addFlash('error', 'No more cards to draw.');
         }
-        
+
         return $this->render('card/draw.html.twig', [
             'card' => $card ? (string) $card : null,
             'remaining' => count($deck->getCards()),
             'drawnCards' => $drawnCards
         ]);
     }
-    
+
     #[Route('/card/deck/draw/multiple', name: 'card_draw_multiple', methods: ['GET'])]
     public function drawMultiple(SessionInterface $session, Request $request): Response
     {
         $number = $request->query->getInt('number', 1);
-    
+
         $this->logger->info("Attempting to draw {$number} cards.");
-    
+
         $deck = $this->ensureDeckExists($session);
         $cards = [];
         for ($i = 0; $i < $number; $i++) {
@@ -117,19 +117,19 @@ class CardController extends AbstractController
                 break;
             }
         }
-    
+
         $session->set('deck', $deck);
         $drawnCards = $session->get('drawn_cards', []);
         $drawnCards = array_merge($drawnCards, array_map('strval', $cards));
         $session->set('drawn_cards', $drawnCards);
-        
+
         return $this->render('card/draw_multiple.html.twig', [
             'cards' => array_map('strval', $cards),
             'remaining' => count($deck->getCards()),
             'drawnCards' => $drawnCards
         ]);
     }
-    
+
 
     #[Route("/card/session", name: "card_session")]
     public function session(SessionInterface $session): Response
