@@ -72,7 +72,12 @@
                     </p>
                 <h3>Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden och dina klasser?</h3>
                     <p>
-
+                        Jag implementerade tre klasser: Card som representerar ett enskilt kort, varje med en färg ("suit") och värde. DeckOfCards representerar en kortlek och har diverse metoder för att initialisera/ställa om, blanda, dra, sortera etc. Slutligen har jag en klass CardHand som representerar handen med de dragna korten.
+                        I CardController så implementerar jag rutter för deck, shuffle, draw och draw_multiple. Jag skapar metod ensureDeckExists för återanvändning av initialiseringslogik.
+                        Jag implementerar session och session/delete rutter för lättare debugging. Jag lägger till alla rutter till en Card Game-sida, vilken fungerar som en landningssida. Jag skapar ett UML-diagram med PlantUML och beskriver klasserna på landningssidan.
+                        Jag implementerar diverse saker såsom t.ex. en inputruta där man kan välja antal kort man vill dra.
+                        Jag går vidare till andra sektionen av krav och implementerar en JsonApiController som innehåller rutter för deck, shuffle, draw och draw_multiple för API-landningssidan.
+                        Jag ser till att förändringar via API och Card Game-sidan båda fungerar bra med session och visar sina uppdateringar på Session-sidan.
                     </p>
                 <h3>Vilka är dina reflektioner så här långt med att jobb i Symfony med applikationskod enligt MVC?</h3>
                     <p>
