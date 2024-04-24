@@ -78,6 +78,9 @@
                         Jag implementerar diverse saker såsom t.ex. en inputruta där man kan välja antal kort man vill dra.
                         Jag går vidare till andra sektionen av krav och implementerar en JsonApiController som innehåller rutter för deck, shuffle, draw och draw_multiple för API-landningssidan.
                         Jag ser till att förändringar via API och Card Game-sidan båda fungerar bra med session och visar sina uppdateringar på Session-sidan.
+                        När det gäller förbättringar så tänker jag dels tester, för att minimera manuell testning (blir viktigare ju större projekten blir, hur mer saker är couplat etc.).
+                        Jag kanske också bör convertera tillbaka till textbeskrivningen av "färgerna" vid API-requests istället för att visa UTF-8 koden för "färgen".
+                        Hade väl varit coolt att implementera någon animation när man drar kort, som flyttar korten ner till "Previously Drawn Cards".
                     </p>
                 <h3>Vilka är dina reflektioner så här långt med att jobb i Symfony med applikationskod enligt MVC?</h3>
                     <p>
@@ -86,7 +89,8 @@
                     </p>
                 <h3>Vilken är din TIL för detta kmom?</h3>
                     <p>
-                        
+                        Att hantera session i Symfony, specifikt hålla ett konsekvent "state" över flera interaktioner. Vidare intressant med JSON-API, vilket är lovande för framtida appliceringar i olika sammanhang. 
+                        Jag funderar på om dessa är REST-ful, om inte annat vill jag lära mig att skapa REST-ful API:er så man kan t.ex. ha en backend med olika frontends (mobilapp, webb etc.)
                     </p>
         </section>
 
