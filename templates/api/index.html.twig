@@ -6,6 +6,16 @@
     <h1>API Overview</h1>
     <p style="text-align: center;">Below is a list of all available API endpoints:</p>
     <ul>
-        <li><a href="{{ path('api_quote') }}">Quote of the Day</a></li>
+        <li><a href="{{ path('api_quote') }}" target="_blank">Quote of the Day</a> - Fetches a random quote.</li>
+        <li><a href="{{ path('api_deck') }}" target="_blank">Get Current Deck</a> - Retrieves the current state of the deck, sorted by suit and value.</li>
+        <li><a href="{{ path('api_shuffle') }}" target="_blank">Shuffle Deck</a> - Randomly shuffles the current deck.</li>
+        <li><a href="{{ path('api_draw') }}" target="_blank">Draw One Card</a> - Draws a single card from the current deck.</li>
+        <li>
+            <form action="{{ path('api_draw_multiple', {'number': 5}) }}" method="get" target="_blank">
+                <label for="number">Draw Multiple Cards:</label>
+                <input type="number" id="number" name="number" value="5" min="1" max="52" style="width: 50px;">
+                <button type="submit">Draw Cards</button>
+            </form>
+        </li>
     </ul>
 {% endblock %}
