@@ -64,7 +64,11 @@
             <h2>Kmom02</h2>
                 <h3>Förklara kort de objektorienterade konstruktionerna arv, komposition, interface och trait och hur de används i PHP.</h3>
                     <p>
-                        
+                        Arv fungerar så att en subklass ärver metoder och attribut från en superklass. PHP nyttjar single inheritance snarare än multiple inheritance. Vid komposition så "har" en klass en annan klass medans en klass "är" också en annan klass vid arv (t.ex. subklassen chihuahua är superklassen hund medans en hund, alltså superklassen, har ben, alltså komposition). Man kan också dela in composition i typer, t.ex. komposition (ena klassen fungerar inte utan den andra) och aggregering (de funkar ihop men kan existera separat).
+                        När det gäller begreppet "interface" så har jag ganska länge försökt förstå detta begrepp. En definition av begreppet är ungefär att en klass interface består av de publika metoder/attribut som en klass har, och ibland specifikt de som är definierade av en klass abstrakta basklass. Den senare kan likställas med ett "kontrakt" som klassen efterlever (etablerandet av kontraktet är just syftet med den abstrakta klassen, vilken inte innehåller konkreta implementeringar/implementationsdetaljer).
+                        Vad som fortfarande är lite otydligt för mig är om en metods parametrar är den metodens "interface", eller om termen inte används på det sättet.
+                        Man kan väl möjligtvis säga då att interface i en bredare betydelse är det som ett objekt visar utåt (parametrar, metoder, attribut), ungefär som celler i kroppen har vissa "tillåtna" sätt att interface:a med cellen som t.ex. vissa virus utnyttjar.
+                        Traits vet jag inte om jag förstått men det låter som "mixins" ungefär, alltså någonting som kan användas för att förlänga en klass med metoder. Likt mixins så verkar traits inte kunna existera självständigt. Båda är i alla fall flexibla sätt att "extend:a" (förlänga) klasser med metoder.
                     </p>
                 <h3>Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden och dina klasser?</h3>
                     <p>
