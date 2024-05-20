@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Game Home{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Card Game 21</h1>
+    <p>The goal of the game is to use two or more cards to reach a total value of 21, or as close as possible without exceeding 21. Aces are worth either 1 or 14.</p>
+    
+    <h2>Game Rules</h2>
+    <p>A typical round when a player plays against the dealer (bank) looks like this:</p>
+    <ul>
+        <li>The game starts with a landing page where you can read the game rules, view documentation, and start the game.</li>
+        <li>The game board is displayed with the player and the dealer not having taken any cards.</li>
+        <li>The player takes a card. The card is displayed.</li>
+        <li>The player can choose to either stay or take another card.</li>
+        <li>If the player exceeds 21, the dealer wins.</li>
+        <li>When the player stays, it is the dealer's turn.</li>
+        <li>The dealer is not aware of the player's hand.</li>
+        <li>The dealer draws cards until they either stay or exceed 21.</li>
+        <li>The dealer wins if their total is equal to or higher than the player's total without exceeding 21.</li>
+        <li>The player wins if the dealer exceeds 21.</li>
+        <li>Afterwards, a new round can be started.</li>
+    </ul>
+
+    <a href="{{ path('game_start') }}" class="btn btn-primary">Start Game</a>
+    <br><br>
+    <a href="{{ path('game_doc') }}" class="btn btn-secondary">Game Documentation</a>
+{% endblock %}
