@@ -3,6 +3,66 @@
 {% block title %}Game Documentation{% endblock %}
 
 {% block body %}
-    <h1>Game Documentation</h1>
-    <p>Here you'll find the documentation for the card game 21.</p>
+    <h1>Game 21 - Documentation</h1>
+    <h2>Game Flowchart</h2>
+    <img src="{{ asset('images/flowchart_game_21.jpg') }}" alt="Flowchart Game 21">
+
+    <h2>Pseudocode</h2>
+    <pre>
+
+// Initialize game
+CREATE Player
+CREATE Bank
+
+// Game loop
+WHILE game is not over
+    // Player's turn
+    REPEAT
+        CALL drawCard WITH Player
+        IF Player.score > 21 THEN
+            SET Bank as winner
+            SET game as over
+        END IF
+        DISPLAY Player's hand and score
+        IF Player.score <= 21 THEN
+            GET playerChoice // 'HIT' or 'STAND'
+        ELSE
+            SET playerChoice TO 'STAND'
+        END IF
+    UNTIL playerChoice = 'STAND' OR Player.score > 21
+
+    // Bank's turn
+    IF game is not over THEN
+        WHILE Bank.score < 17
+            CALL drawCard WITH Bank
+        END WHILE
+        IF Bank.score > 21 THEN
+            SET Player as winner
+            SET game as over
+        END IF
+    END IF
+END WHILE
+
+// Determine winner
+IF Player.score > 21 THEN
+    DISPLAY "Bank wins!"
+ELSE IF Bank.score > 21 THEN
+    DISPLAY "Player wins!"
+ELSE IF Player.score > Bank.score THEN
+    DISPLAY "Player wins!"
+ELSE
+    DISPLAY "Bank wins!"
+END IF
+    </pre>
+
+<h2>Classes</h2>
+<ul>
+    <li><strong>Game</strong>: Manages the overall game flow, including player and bank turns, and determines the winner.</li>
+    <li><strong>Player</strong>: Represents a player, holding a hand of cards and managing the player's actions.</li>
+    <li><strong>Bank</strong>: Represents the dealer, holding a hand of cards and managing the dealer's actions.</li>
+    <li><strong>Card</strong>: Represents a single playing card with a suit and value.</li>
+    <li><strong>Deck</strong>: Manages a deck of cards, including shuffling and dealing cards.</li>
+    <li><strong>Hand</strong>: Represents a collection of cards held by a player or the bank, and calculates the total score.</li>
+</ul>
+
 {% endblock %}
