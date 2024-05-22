@@ -7,6 +7,9 @@ use Psr\Log\LoggerInterface;
 
 class DeckOfCards
 {
+    /**
+     * @var ArrayCollection<int, Card>
+     */
     private ArrayCollection $cards;
 
     public function __construct()
@@ -35,17 +38,23 @@ class DeckOfCards
         $logger->info('Deck shuffled.');
     }
 
-    public function drawCard(LoggerInterface $logger)
+    /**
+     * Draws a card from the deck.
+     * @param LoggerInterface $logger
+     * @return Card|null The card drawn, or null if the deck is empty.
+     */
+    public function drawCard(LoggerInterface $logger): ?Card
     {
         if (!$this->cards->isEmpty()) {
             $card = $this->cards->first();
-            $this->cards->removeElement($card);
-            $logger->info('Card drawn:', ['card' => $card->__toString()]);
-            return $card;
-        } else {
-            $logger->info('Deck is empty, no card drawn.');
-            return null;
+            if ($card !== false) {
+                $this->cards->removeElement($card);
+                $logger->info('Card drawn:', ['card' => $card->__toString()]);
+                return $card;
+            }
         }
+        $logger->info('Deck is empty, no card drawn.');
+        return null;
     }
 
     public function resetDeck(): void
@@ -53,11 +62,19 @@ class DeckOfCards
         $this->initializeDeck();
     }
 
+    /**
+     * Gets the cards in the deck.
+     * @return ArrayCollection<int, Card>
+     */
     public function getCards(): ArrayCollection
     {
         return $this->cards;
     }
 
+    /**
+     * Returns a sorted array of cards from the deck.
+     * @return array<int, Card>
+     */
     public function getSortedCards(): array
     {
         $cardsArray = $this->cards->toArray();
@@ -74,6 +91,11 @@ class DeckOfCards
         return $cardsArray;
     }
 
+    /**
+     * Sets the cards in the deck.
+     * @param ArrayCollection<int, Card> $cards
+     * @return void
+     */
     public function setCards(ArrayCollection $cards): void
     {
         $this->cards = $cards;
@@ -84,6 +106,10 @@ class DeckOfCards
         return 'Deck of Cards: ' . $this->cards->count() . ' cards remaining';
     }
 
+    /**
+     * Returns a detailed string representation of the deck.
+     * @return string
+     */
     public function detailedString()
     {
         $cardDetails = [];
