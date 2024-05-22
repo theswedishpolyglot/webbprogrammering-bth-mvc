@@ -32,6 +32,9 @@ class Card implements JsonSerializable
         return $this->value;
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function jsonSerialize(): array
     {
         return [
@@ -50,6 +53,9 @@ class Card implements JsonSerializable
         return self::SUIT_SYMBOLS[$this->suit] ?? '?';
     }
 
+    /**
+     * @return array<string, string>
+     */
     public function toArray(): array
     {
         return [
@@ -58,6 +64,10 @@ class Card implements JsonSerializable
         ];
     }
 
+    /**
+     * @param array<string, string> $data An array with 'suit' and 'value' as keys with their corresponding string values.
+     * @return self Returns an instance of Card.
+     */
     public static function fromArray(array $data): self
     {
         return new self($data['suit'], $data['value']);

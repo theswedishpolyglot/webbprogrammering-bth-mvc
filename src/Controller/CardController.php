@@ -12,7 +12,7 @@ use Psr\Log\LoggerInterface;
 
 class CardController extends AbstractController
 {
-    private $logger;
+    private LoggerInterface $logger;
 
     public function __construct(LoggerInterface $logger)
     {
