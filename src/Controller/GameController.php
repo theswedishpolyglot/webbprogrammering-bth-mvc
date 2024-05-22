@@ -50,7 +50,11 @@ class GameController extends AbstractController
             return $this->redirectToRoute('game_start');
         }
 
-        $game = Game::fromArray($gameData, $logger);
+        $deck = new DeckOfCards();
+        $player = new Player();
+        $bank = new Bank();
+        $game = new Game($player, $bank, $deck, $logger);
+        $game->fromArray($gameData, $logger);
 
         return $this->render('game/play.html.twig', [
             'playerHand' => $game->getPlayer()->getHand(),
@@ -66,7 +70,11 @@ class GameController extends AbstractController
             return $this->redirectToRoute('game_start');
         }
 
-        $game = Game::fromArray($gameData, $logger);
+        $deck = new DeckOfCards();
+        $player = new Player();
+        $bank = new Bank();
+        $game = new Game($player, $bank, $deck, $logger);
+        $game->fromArray($gameData, $logger);
         $game->playerDrawCard();
 
         $session->set('game', $game->toArray());
@@ -86,7 +94,11 @@ class GameController extends AbstractController
             return $this->redirectToRoute('game_start');
         }
 
-        $game = Game::fromArray($gameData, $logger);
+        $deck = new DeckOfCards();
+        $player = new Player();
+        $bank = new Bank();
+        $game = new Game($player, $bank, $deck, $logger);
+        $game->fromArray($gameData, $logger);
         $game->bankPlay();
 
         $session->set('game', $game->toArray());
@@ -102,7 +114,11 @@ class GameController extends AbstractController
             return $this->redirectToRoute('game_start');
         }
 
-        $game = Game::fromArray($gameData, $logger);
+        $deck = new DeckOfCards();
+        $player = new Player();
+        $bank = new Bank();
+        $game = new Game($player, $bank, $deck, $logger);
+        $game->fromArray($gameData, $logger);
 
         return $this->render('game/result.html.twig', [
             'playerHand' => $game->getPlayer()->getHand(),

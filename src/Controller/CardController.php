@@ -75,25 +75,27 @@ class CardController extends AbstractController
 
         $card = $deck->drawCard($logger);
 
-        if ($card) {
-            $this->logger->info('Card drawn:', ['card' => $card->__toString()]);
-        } else {
+        if (!$card) {
             $this->logger->info('Failed to draw a card. No more cards or error.');
+            $this->addFlash('error', 'No more cards to draw.');
+            return $this->render('card/draw.html.twig', [
+                'card' => null,
+                'remaining' => count($deck->getCards()),
+                'drawnCards' => $session->get('drawn_cards', [])
+            ]);
         }
+
+        $this->logger->info('Card drawn:', ['card' => $card->__toString()]);
 
         $session->set('deck', $deck);
         $session->save();
 
         $drawnCards = $session->get('drawn_cards', []);
-        if ($card) {
-            $drawnCards[] = (string) $card;
-            $session->set('drawn_cards', $drawnCards);
-        } else {
-            $this->addFlash('error', 'No more cards to draw.');
-        }
+        $drawnCards[] = (string) $card;
+        $session->set('drawn_cards', $drawnCards);
 
         return $this->render('card/draw.html.twig', [
-            'card' => $card ? (string) $card : null,
+            'card' => (string) $card,
             'remaining' => count($deck->getCards()),
             'drawnCards' => $drawnCards
         ]);
@@ -110,12 +112,11 @@ class CardController extends AbstractController
         $cards = [];
         for ($i = 0; $i < $number; $i++) {
             $card = $deck->drawCard($this->logger);
-            if ($card) {
-                $cards[] = $card;
-            } else {
+            if (!$card) {
                 $this->logger->info('No more cards available to draw.');
                 break;
             }
+            $cards[] = $card;
         }
 
         $session->set('deck', $deck);

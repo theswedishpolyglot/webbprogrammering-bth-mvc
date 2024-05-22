@@ -69,12 +69,11 @@ class JsonApiController extends AbstractController
         $drawnCards = $session->get('drawn_cards', []);
         for ($i = 0; $i < $number; $i++) {
             $card = $deck->drawCard($this->logger);
-            if ($card) {
-                $cards[] = $card;
-                $drawnCards[] = (string) $card;
-            } else {
+            if (!$card) {
                 break;
             }
+            $cards[] = $card;
+            $drawnCards[] = (string) $card;
         }
         $session->set('deck', $deck);
         $session->set('drawn_cards', $drawnCards);

@@ -55,11 +55,11 @@ class Game
 
         if ($playerValue > 21) {
             return 'Bank wins!';
-        } elseif ($bankValue > 21 || $playerValue > $bankValue) {
-            return 'Player wins!';
-        } else {
-            return 'Bank wins!';
         }
+        if ($bankValue > 21 || $playerValue > $bankValue) {
+            return 'Player wins!';
+        }
+        return 'Bank wins!';
     }
 
     /**
@@ -79,6 +79,8 @@ class Game
     }
 
     /**
+     * Initializes the Game instance from an array of data.
+     *
      * @param array{
      *     player: array<array<string, mixed>>,
      *     bank: array<array<string, mixed>>,
@@ -87,7 +89,7 @@ class Game
      * @param LoggerInterface $logger
      * @return self
      */
-    public static function fromArray(array $data, LoggerInterface $logger): self
+    public function fromArray(array $data, LoggerInterface $logger): self
     {
         $deck = new DeckOfCards();
         $cards = new ArrayCollection();
@@ -106,6 +108,42 @@ class Game
             $bank->getHand()->addCard(new Card($cardData['suit'], $cardData['value']));
         }
 
-        return new self($player, $bank, $deck, $logger);
+        $this->player = $player;
+        $this->bank = $bank;
+        $this->deck = $deck;
+        $this->logger = $logger;
+
+        return $this;
     }
+
+    // /**
+    //  * @param array{
+    //  *     player: array<array<string, mixed>>,
+    //  *     bank: array<array<string, mixed>>,
+    //  *     deck: array<array<string, mixed>>
+    //  * } $data
+    //  * @param LoggerInterface $logger
+    //  * @return self
+    //  */
+    // public static function fromArray(array $data, LoggerInterface $logger): self
+    // {
+    //     $deck = new DeckOfCards();
+    //     $cards = new ArrayCollection();
+    //     foreach ($data['deck'] as $cardData) {
+    //         $cards->add(new Card($cardData['suit'], $cardData['value']));
+    //     }
+    //     $deck->setCards($cards);
+
+    //     $player = new Player();
+    //     foreach ($data['player'] as $cardData) {
+    //         $player->getHand()->addCard(new Card($cardData['suit'], $cardData['value']));
+    //     }
+
+    //     $bank = new Bank();
+    //     foreach ($data['bank'] as $cardData) {
+    //         $bank->getHand()->addCard(new Card($cardData['suit'], $cardData['value']));
+    //     }
+
+    //     return new self($player, $bank, $deck, $logger);
+    // }
 }

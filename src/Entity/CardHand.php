@@ -45,14 +45,19 @@ class CardHand
         $aceCount = 0;
 
         foreach ($this->cards as $card) {
-            if (is_numeric($card->getValue())) {
-                $value += (int) $card->getValue();
-            } elseif ($card->getValue() === 'Ace') {
+            $cardValue = $card->getValue();
+            if (is_numeric($cardValue)) {
+                $value += (int) $cardValue;
+                continue;
+            }
+
+            if ($cardValue === 'Ace') {
                 $aceCount++;
                 $value += 1;
-            } else {
-                $value += 10;
+                continue;
             }
+
+            $value += 10;
         }
 
         while ($aceCount > 0 && $value + 13 <= 21) {
