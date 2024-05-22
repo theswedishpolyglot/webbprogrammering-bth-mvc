@@ -62,6 +62,13 @@ class Game
         }
     }
 
+    /**
+     * @return array{
+     *     player: array<array<string, mixed>>,
+     *     bank: array<array<string, mixed>>,
+     *     deck: array<array<string, mixed>>
+     * }
+     */
     public function toArray(): array
     {
         return [
@@ -71,6 +78,15 @@ class Game
         ];
     }
 
+    /**
+     * @param array{
+     *     player: array<array<string, mixed>>,
+     *     bank: array<array<string, mixed>>,
+     *     deck: array<array<string, mixed>>
+     * } $data
+     * @param LoggerInterface $logger
+     * @return self
+     */
     public static function fromArray(array $data, LoggerInterface $logger): self
     {
         $deck = new DeckOfCards();
