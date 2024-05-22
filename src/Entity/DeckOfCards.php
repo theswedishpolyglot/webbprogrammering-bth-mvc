@@ -74,6 +74,11 @@ class DeckOfCards
         return $cardsArray;
     }
 
+    public function setCards(ArrayCollection $cards): void
+    {
+        $this->cards = $cards;
+    }
+
     public function __toString()
     {
         return 'Deck of Cards: ' . $this->cards->count() . ' cards remaining';

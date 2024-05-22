@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Play Game{% endblock %}
+
+{% block body %}
+    <h1>Play Game</h1>
+    <h2>Your Hand (Value: {{ playerHand.value }})</h2>
+    <div class="card-container">
+        {% for card in playerHand.cards %}
+            <div class="card">
+                {{ card }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Bank's Hand</h2>
+    <div class="card-container">
+        {% for card in bankHand.cards %}
+            <div class="card">
+                {{ card }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <form action="{{ path('game_draw') }}" method="post">
+        <button type="submit" class="btn btn-primary">Draw Card</button>
+    </form>
+    <form action="{{ path('game_stay') }}" method="post">
+        <button type="submit" class="btn btn-secondary">Stay</button>
+    </form>
+{% endblock %}

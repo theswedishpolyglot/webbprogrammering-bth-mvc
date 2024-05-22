@@ -84,4 +84,20 @@ class JsonApiController extends AbstractController
             'remaining' => count($deck->getCards()),
         ]);
     }
+
+    #[Route('/api/game', name: 'api_game', methods: ['GET'])]
+    public function gameState(SessionInterface $session): JsonResponse
+    {
+        $gameData = $session->get('game', null);
+
+        if (!$gameData) {
+            return $this->json([
+                'error' => 'No game state found in session',
+            ], 404);
+        }
+
+        return $this->json([
+            'game' => $gameData,
+        ]);
+    }
 }

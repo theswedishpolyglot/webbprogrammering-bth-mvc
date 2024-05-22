@@ -32,7 +32,7 @@ class Card implements JsonSerializable
         return $this->value;
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return [
             'suit' => $this->getSuitSymbol(),
@@ -49,4 +49,18 @@ class Card implements JsonSerializable
     {
         return self::SUIT_SYMBOLS[$this->suit] ?? '?';
     }
+
+    public function toArray(): array
+    {
+        return [
+            'suit' => $this->suit,
+            'value' => $this->value
+        ];
+    }
+
+    public static function fromArray(array $data): self
+    {
+        return new self($data['suit'], $data['value']);
+    }
+
 }
