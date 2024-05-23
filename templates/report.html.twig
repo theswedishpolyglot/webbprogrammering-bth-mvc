@@ -126,43 +126,87 @@
             <h2>Kmom04</h2>
             <h3>Berätta hur du upplevde att skriva kod som testar annan kod med PHPUnit och hur du upplever phpunit rent allmänt.</h3>
                 <p>
-
+                    Jag gillar principen med testning, alltså att det sänker kostnaden/den psykologiska barriären för att refaktorera/ändra/göra tillägg till kodbasen.
+                    Sedan tänker jag att vissa enhetstest är ganska onödiga och att man nog vill hitta en balans, där man fokuserar på viktigare enhetstest (t.ex. med fokus på sådant som förmodligen kan ändras i framtiden).
+                    Sedan att det är så mätbart tycker jag är coolt och användbart.
                 </p>
             <h3>Hur väl lyckades du med kodtäckningen av din kod, lyckades du nå mer än 90% kodtäckning?</h3>
                 <p>
-
+                    Jag lyckades nå cirka 90 % kodtäckning. Jag missar lite på "classes and traits" vilket jag inte riktigt förstår vad som syftas på.
                 </p>
             <h3>Upplever du din egen kod som “testbar kod” eller finns det delar i koden som är mer eller mindre testbar och finns det saker som kan göras för att förbättra kodens testbarhet?</h3>
                 <p>
-
+                    Jag tycker att koden är till största del testbar, eftersom den är till stor del indelad i mindre metoder.
+                    I allmänhet är det väl kod som är starkt "coupled", som har externa beroenden, som täcker mer än en uppgift per funktion/metod och kod som har komplext kontrollflöde som är svårare att enhetstesta.
+                    Vissa typer av kod kanske till och med har så många möjliga utfall att det inte går att testa alla möjliga utfall (det är på sätt och vis "intractable" i alla fall i ett testningssammanhang)
                 </p>
             <h3>Valde du att skriva om delar av din kod för att förbättra den eller göra den mer testbar, om så berätta lite hur du tänkte.</h3>
                 <p>
-
+                    Jag hade en statisk metod som min linter inte gillade att jag testade så jag skapade en icke-statisk version.
+                    Utöver det så undvek jag att ändra på saker i kodbasen.
                 </p>
             <h3>Fundera över om du anser att testbar kod är något som kan identifiera “snygg och ren kod”.</h3>
                 <p>
-
+                    Jag tänker att testbar kod och snygg/ren kod överlappar ganska mycket. Både bör vara begränsade i ansvarsfördelning (t.ex. en metod per diskret uppgift), och vara återanvändbar/modulär, förlängningsbar etc.
+                    Jag tänker väl dels att i båda fallen så vill man skriva kod som minimerar behovet av att skriva om testkod.
+                    Alltså om kodbasen kan förlängas (utan att kräva stora förändringar via sidoeffekter) så är underhållningskostnaderna för enhetstester mindre. 
                 </p>
             <h3>Vilken är din TIL för detta kmom?</h3>
                 <p>
-
+                    TIL för detta kmom är hur enhetstester fungerar i praktiken när man jobbar med PHP/Symfony.
                 </p>
         </section>
 
         <section id="kmom05">
             <h2>Kmom05</h2>
-            <!-- -->
+            <h3>Gick det bra att jobba igenom övningen med Symfony och Doctrine. Något särskilt du tänkte/reagerade på under övningen?</h3>
+                <p>
+                    
+                </p>
+            <h3>Berätta om din applikation och hur du tänkte när du byggde upp den. Tänkte du något speciellt på användargränssnittet?</h3>
+                <p>
+                    
+                </p>
+            <h3>Gick det bra att jobba med ORM i CRUD eller vad anser du om det, jämför gärna med andra sätt att jobba med databaser?</h3>
+                <p>
+                    
+                </p>
+            <h3>Vad är din uppfattning om ORM så här långt och relatera gärna till andra sätt att jobba med applikationskod mot databaser?</h3>
+                <p>
+                    
+                </p>
+            <h3>Vilken är din TIL för detta kmom?</h3>
+                <p>
+                    
+                </p>
         </section>
 
         <section id="kmom06">
             <h2>Kmom06</h2>
-            <!-- -->
+            <h3>Hur uppfattade du verktyget phpmetrics och fann du några särskilda bitar mer värdefulla än andra? Var det några särskilda metrics eller bilder du uppskattade?</h3>
+                <p>
+                    
+                </p>
+            <h3>Berätta hur det gick att integrera med Scrutinizer och vilken är din första känsla av verktyget och dess badges? Vilken kodtäckning och kodkvalitet fick du efter första bygget?</h3>
+                <p>
+                    
+                </p>
+            <h3>Hur är din egen syn på kodkvalitet, berätta lite om den? Tror du man kan man påvisa kodkvalitet i någon viss mån med badges eller vad tror du?</h3>
+                <p>
+                    
+                </p>
+            <h3>Vilken är din TIL för detta kmom?</h3>
+                <p>
+                    
+                </p>
         </section>
 
         <section id="kmom10">
             <h2>Kmom10</h2>
-            <!-- -->
+            <h3></h3>
+                <p>
+
+                </p>
         </section>
     </div>
 {% endblock %}

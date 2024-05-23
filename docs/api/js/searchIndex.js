@@ -251,6 +251,11 @@ Search.appendIndex(
             "summary": "Create\u0020a\u0020Card\u0020instance\u0020from\u0020an\u0020array.",
             "url": "classes/App-Entity-Card.html#method_fromArray"
         },                {
+            "fqsen": "\\App\\Entity\\Card\u003A\u003AfromArrayInstance\u0028\u0029",
+            "name": "fromArrayInstance",
+            "summary": "Create\u0020a\u0020Card\u0020instance\u0020from\u0020an\u0020array\u0020\u0028non\u002Dstatic,\u0020for\u0020testing\u0020purposes\u0029.",
+            "url": "classes/App-Entity-Card.html#method_fromArrayInstance"
+        },                {
             "fqsen": "\\App\\Entity\\Card\u003A\u003ASUIT_SYMBOLS",
             "name": "SUIT_SYMBOLS",
             "summary": "",
