@@ -92,6 +92,7 @@
         "csfix:dry": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src --dry-run -v",
         "phpmd": "tools/phpmd/vendor/bin/phpmd . text tools/phpmd/phpmd.xml || true",
         "phpstan": "tools/phpstan/vendor/bin/phpstan analyse -c tools/phpstan/phpstan.neon || true",
+        "phpdoc": "tools/phpdoc/phpdoc --config=tools/phpdoc/phpdoc.xml",
         "lint": [
             "@csfix:dry",
             "@phpmd",
