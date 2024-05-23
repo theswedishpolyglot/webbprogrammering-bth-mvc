@@ -96,7 +96,30 @@
 
         <section id="kmom03">
             <h2>Kmom03</h2>
-            <!-- -->
+            <h3>Berätta hur det kändes att modellera ett kortspel med flödesdiagram och psuedokod. Var det något som du tror stödjer dig i din problemlösning och tankearbete för att strukturera koden kring en applikation?</h3>
+                <p>
+                    Jag tycker det är bra för att få en idé kring hur logiken kan se ut i slutändan men samtidigt att man bör nog förhålla sig lite flexibelt till sin planering, eftersom det kan komma upp saker man inte tänkt på i förväg och så vidare. Jag tänker att man kan se det som att man etablerar en arbetshypotes kring en fungerande implementering som man sedan testar och itererar på om nödvändigt.
+                    Jag tänker att det kan också sänka den upplevda kognitiva belastningen i stunden för att man har ett extern kognitivt stöd (diagram, lista på klasser/metoder, implementeringslogik/psuedokod etc.) som man kan hänvisa till.
+                </p>
+            <h3>Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden, dina klasser och applikationen som helhet?</h3>
+                <p>
+                    Jag började med att lägga till landningssidan och placeholder templates för doc, home (landningssida), start (dit man kommer om man klickar starta spel) samt ordnade jag en grundläggande GameController.
+                    Sedan genomförde jag problemlösningskravet. 
+                    I nästa steg så implementerade jag klasserna som definierats i problemlösningssteget, alltså Bank, Game och Player. Jag använde tidigare implementerade klasser Card, CardHand och DeckOfCards.
+                    Game-klassen hanterar spelflödet. Player-klassen representerar en spelare och hanterar dennes hand och handlingar. Bank-klassen hanterar banken, dennes kort samt dennes handlingar. 
+                    Jag uppdaterade CardHand att hantera ess enligt tjugoett-reglerna. Jag skapade play och result templates som visas under spelet respektive när spelet är slut.
+                    Jag är rätt nöjd med indelningen i de klasser jag har.
+                    Jag hade kunnat förbättra själva stylingen/gränssnittet till att se lite mer tilltalande ut.
+                    Jag tycker att serialiseringslösningen/konvertering till och från array blev lite väl komplicerad och hade kunnat refaktorisera detta till att bli enklare så att förlängning av kodbasen blir lättare i en (hypotetisk) vidareutveckling av applikationen.
+                </p>
+            <h3>Vilken är din känsla för att koda i ett ramverk som Symfony, så här långt in i kursen?</h3>
+                <p>
+                    Det finns saker jag gillar och gillar mindre. Det jag gillar är att det finns en tydlig indelning i templates, Entity, Controller, public/assets, tools osv. Alltså att det underlättar och uppmuntrar till ett arkitekturtänk. Jag tycker fortfarande att debugging i Symfony är lite jobbigt.
+                </p>
+            <h3>Vilken är din TIL för detta kmom?</h3>
+                <p>
+                    TIL för detta kmom är nog ökad insikt i nyttan av planering i form av flödesdiagram, klasslistor, psuedokod med mera.
+                </p>
         </section>
 
         <section id="kmom04">

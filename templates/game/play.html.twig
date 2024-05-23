@@ -22,10 +22,12 @@
         {% endfor %}
     </div>
 
-    <form action="{{ path('game_draw') }}" method="post">
-        <button type="submit" class="btn btn-primary">Draw Card</button>
-    </form>
-    <form action="{{ path('game_stay') }}" method="post">
-        <button type="submit" class="btn btn-secondary">Stay</button>
-    </form>
+    <div class="btn-container">
+        <form action="{{ path('game_draw') }}" method="post">
+            <button type="submit" class="btn btn-primary">Draw Card</button>
+        </form>
+        <form action="{{ path('game_stay') }}" method="post">
+            <button type="submit" class="btn btn-secondary">Stay</button>
+        </form>
+    </div>
 {% endblock %}
