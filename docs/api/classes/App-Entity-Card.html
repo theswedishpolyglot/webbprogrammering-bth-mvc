@@ -125,11 +125,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class Card</p>
+
+    <section class="phpdocumentor-description"><p>Represents a playing card with a suit and a value.</p>
+</section>
 
 
 
@@ -200,48 +203,56 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
+<dd>Card constructor.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Card.html#method___toString">__toString()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
+<dd>Get the string representation of the card.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Card.html#method_fromArray">fromArray()</a>
     <span>
                                 &nbsp;: self    </span>
 </dt>
+<dd>Create a Card instance from an array.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Card.html#method_getSuit">getSuit()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Get the suit of the card.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Card.html#method_getValue">getValue()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Get the value of the card.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Card.html#method_jsonSerialize">jsonSerialize()</a>
     <span>
                                 &nbsp;: array&lt;string, mixed&gt;    </span>
 </dt>
+<dd>Convert the card to a JSON-serializable format.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Card.html#method_toArray">toArray()</a>
     <span>
                                 &nbsp;: array&lt;string, string&gt;    </span>
 </dt>
+<dd>Convert the card to an array format.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/App-Entity-Card.html#method_getSuitSymbol">getSuitSymbol()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Get the symbol for the suit of the card.</dd>
 
     </dl>
 
@@ -265,7 +276,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -309,7 +320,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
@@ -342,7 +353,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -380,11 +391,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Card constructor.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$suit</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
@@ -399,14 +411,18 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The suit of the card.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$value</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The value of the card.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -428,14 +444,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">74</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the string representation of the card.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__toString</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__toString</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -443,7 +460,15 @@
     
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The string representation of the card.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -459,11 +484,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">71</span>
+    <span class="phpdocumentor-element-found-in__line">108</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Create a Card instance from an array.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
             <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">fromArray</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
@@ -510,11 +536,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the suit of the card.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getSuit</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -528,6 +555,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The suit of the card.</p>
+</section>
+
             </section>
 
 </article>
@@ -545,11 +576,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the value of the card.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getValue</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -563,6 +595,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The value of the card.</p>
+</section>
+
             </section>
 
 </article>
@@ -580,11 +616,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Convert the card to a JSON-serializable format.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">jsonSerialize</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, mixed&gt;</span></code>
@@ -598,6 +635,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">array&lt;string, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The JSON-serializable representation of the card.</p>
+</section>
+
             </section>
 
 </article>
@@ -615,11 +656,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">59</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Convert the card to an array format.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">toArray</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span></code>
@@ -633,6 +675,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The array representation of the card.</p>
+</section>
+
             </section>
 
 </article>
@@ -650,11 +696,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Card.php"><a href="files/src-entity-card.html"><abbr title="src/Entity/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the symbol for the suit of the card.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
                     <span class="phpdocumentor-signature__name">getSuitSymbol</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -668,6 +715,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The symbol for the suit.</p>
+</section>
+
             </section>
 
 </article>

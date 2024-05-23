@@ -122,11 +122,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class Game</p>
+
+    <section class="phpdocumentor-description"><p>Manages the overall game flow, including player and bank turns, and determines the winner.</p>
+</section>
 
 
 
@@ -189,12 +192,14 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
+<dd>Game constructor.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Game.html#method_bankPlay">bankPlay()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>The bank plays its turn according to the rules.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Game.html#method_fromArray">fromArray()</a>
@@ -208,36 +213,42 @@
     <span>
                                 &nbsp;: <a href="classes/App-Entity-Bank.html"><abbr title="\App\Entity\Bank">Bank</abbr></a>    </span>
 </dt>
+<dd>Get the bank instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Game.html#method_getDeck">getDeck()</a>
     <span>
                                 &nbsp;: <a href="classes/App-Entity-DeckOfCards.html"><abbr title="\App\Entity\DeckOfCards">DeckOfCards</abbr></a>    </span>
 </dt>
+<dd>Get the deck of cards instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Game.html#method_getPlayer">getPlayer()</a>
     <span>
                                 &nbsp;: <a href="classes/App-Entity-Player.html"><abbr title="\App\Entity\Player">Player</abbr></a>    </span>
 </dt>
+<dd>Get the player instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Game.html#method_getResult">getResult()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Determines the result of the game.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Game.html#method_playerDrawCard">playerDrawCard()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>The player draws a card from the deck.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Game.html#method_toArray">toArray()</a>
     <span>
                                 &nbsp;: array{player: array<string,mixed>[], bank: array<string,mixed>[], deck: array<string,mixed>[]}    </span>
 </dt>
+<dd>Converts the game state to an array.</dd>
 
     </dl>
 
@@ -270,7 +281,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -303,7 +314,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -336,7 +347,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
@@ -369,7 +380,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -407,11 +418,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Game constructor.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Entity-Player.html"><abbr title="\App\Entity\Player">Player</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$player</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Entity-Bank.html"><abbr title="\App\Entity\Bank">Bank</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$bank</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Entity-DeckOfCards.html"><abbr title="\App\Entity\DeckOfCards">DeckOfCards</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deck</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$logger</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
@@ -426,28 +438,36 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Entity-Player.html"><abbr title="\App\Entity\Player">Player</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The player instance.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$bank</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Entity-Bank.html"><abbr title="\App\Entity\Bank">Bank</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The bank instance.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$deck</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Entity-DeckOfCards.html"><abbr title="\App\Entity\DeckOfCards">DeckOfCards</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The deck of cards instance.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$logger</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The logger instance for logging actions.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -469,11 +489,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The bank plays its turn according to the rules.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">bankPlay</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -500,7 +521,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">92</span>
+    <span class="phpdocumentor-element-found-in__line">137</span>
 
     </aside>
 
@@ -520,14 +541,18 @@
                 : <span class="phpdocumentor-signature__argument__return-type">array{player: array<string,mixed>[], bank: array<string,mixed>[], deck: array<string,mixed>[]}</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The game state as an array.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$logger</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The logger instance for logging actions.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -536,6 +561,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">self</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the initialized Game instance.</p>
+</section>
+
             </section>
 
 </article>
@@ -553,11 +582,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the bank instance.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getBank</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/App-Entity-Bank.html"><abbr title="\App\Entity\Bank">Bank</abbr></a></span></code>
@@ -571,6 +601,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><a href="classes/App-Entity-Bank.html"><abbr title="\App\Entity\Bank">Bank</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The bank instance.</p>
+</section>
+
             </section>
 
 </article>
@@ -588,11 +622,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the deck of cards instance.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getDeck</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/App-Entity-DeckOfCards.html"><abbr title="\App\Entity\DeckOfCards">DeckOfCards</abbr></a></span></code>
@@ -606,6 +641,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><a href="classes/App-Entity-DeckOfCards.html"><abbr title="\App\Entity\DeckOfCards">DeckOfCards</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The deck of cards instance.</p>
+</section>
+
             </section>
 
 </article>
@@ -623,11 +662,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the player instance.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getPlayer</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/App-Entity-Player.html"><abbr title="\App\Entity\Player">Player</abbr></a></span></code>
@@ -641,6 +681,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><a href="classes/App-Entity-Player.html"><abbr title="\App\Entity\Player">Player</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The player instance.</p>
+</section>
+
             </section>
 
 </article>
@@ -658,11 +702,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Determines the result of the game.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getResult</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -676,6 +721,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The result of the game ('Player wins!' or 'Bank wins!').</p>
+</section>
+
             </section>
 
 </article>
@@ -693,11 +742,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The player draws a card from the deck.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">playerDrawCard</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -724,11 +774,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Game.php"><a href="files/src-entity-game.html"><abbr title="src/Entity/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">72</span>
+    <span class="phpdocumentor-element-found-in__line">117</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Converts the game state to an array.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">toArray</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array{player: array<string,mixed>[], bank: array<string,mixed>[], deck: array<string,mixed>[]}</span></code>
@@ -742,6 +793,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">array{player: array<string,mixed>[], bank: array<string,mixed>[], deck: array<string,mixed>[]}</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The game state as an array.</p>
+</section>
+
             </section>
 
 </article>

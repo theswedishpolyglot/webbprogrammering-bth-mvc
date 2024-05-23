@@ -5,18 +5,32 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Psr\Log\LoggerInterface;
 
+/**
+ * Class DeckOfCards
+ *
+ * Represents a deck of playing cards.
+ */
 class DeckOfCards
 {
     /**
-     * @var ArrayCollection<int, Card>
+     * @var ArrayCollection<int, Card> The collection of cards in the deck.
      */
     private ArrayCollection $cards;
 
+    /**
+     * DeckOfCards constructor.
+     * Initializes a new deck of cards.
+     */
     public function __construct()
     {
         $this->initializeDeck();
     }
 
+    /**
+     * Initializes the deck with 52 playing cards.
+     *
+     * @return void
+     */
     private function initializeDeck(): void
     {
         $this->cards = new ArrayCollection();
@@ -30,6 +44,12 @@ class DeckOfCards
         }
     }
 
+    /**
+     * Shuffles the deck of cards.
+     *
+     * @param LoggerInterface $logger The logger to log the shuffling action.
+     * @return void
+     */
     public function shuffle(LoggerInterface $logger): void
     {
         $cards = $this->cards->toArray();
@@ -40,7 +60,8 @@ class DeckOfCards
 
     /**
      * Draws a card from the deck.
-     * @param LoggerInterface $logger
+     *
+     * @param LoggerInterface $logger The logger to log the draw action.
      * @return Card|null The card drawn, or null if the deck is empty.
      */
     public function drawCard(LoggerInterface $logger): ?Card
@@ -57,6 +78,11 @@ class DeckOfCards
         return null;
     }
 
+    /**
+     * Resets the deck to its initial state.
+     *
+     * @return void
+     */
     public function resetDeck(): void
     {
         $this->initializeDeck();
@@ -64,7 +90,8 @@ class DeckOfCards
 
     /**
      * Gets the cards in the deck.
-     * @return ArrayCollection<int, Card>
+     *
+     * @return ArrayCollection<int, Card> The collection of cards in the deck.
      */
     public function getCards(): ArrayCollection
     {
@@ -73,7 +100,8 @@ class DeckOfCards
 
     /**
      * Returns a sorted array of cards from the deck.
-     * @return array<int, Card>
+     *
+     * @return array<int, Card> The sorted array of cards.
      */
     public function getSortedCards(): array
     {
@@ -93,7 +121,8 @@ class DeckOfCards
 
     /**
      * Sets the cards in the deck.
-     * @param ArrayCollection<int, Card> $cards
+     *
+     * @param ArrayCollection<int, Card> $cards The collection of cards to set in the deck.
      * @return void
      */
     public function setCards(ArrayCollection $cards): void
@@ -101,6 +130,11 @@ class DeckOfCards
         $this->cards = $cards;
     }
 
+    /**
+     * Gets the string representation of the deck.
+     *
+     * @return string The string representation of the deck.
+     */
     public function __toString()
     {
         return 'Deck of Cards: ' . $this->cards->count() . ' cards remaining';
@@ -108,7 +142,8 @@ class DeckOfCards
 
     /**
      * Returns a detailed string representation of the deck.
-     * @return string
+     *
+     * @return string The detailed string representation of the deck.
      */
     public function detailedString()
     {

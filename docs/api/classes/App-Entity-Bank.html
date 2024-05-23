@@ -125,11 +125,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Bank.php"><a href="files/src-entity-bank.html"><abbr title="src/Entity/Bank.php">Bank.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class Bank</p>
+
+    <section class="phpdocumentor-description"><p>Represents the dealer (bank) in the card game. The bank is a player with specific rules for drawing cards.</p>
+</section>
 
 
 
@@ -174,18 +177,21 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
+<dd>Player constructor.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Player.html#method_getHand">getHand()</a>
     <span>
                                 &nbsp;: <a href="classes/App-Entity-CardHand.html"><abbr title="\App\Entity\CardHand">CardHand</abbr></a>    </span>
 </dt>
+<dd>Get the player&#039;s hand of cards.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Bank.html#method_play">play()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>The bank plays its turn by drawing cards from the deck until its hand value reaches at least 17.</dd>
 
     </dl>
 
@@ -218,7 +224,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Player.php"><a href="files/src-entity-player.html"><abbr title="src/Entity/Player.php">Player.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
@@ -256,18 +262,21 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Player.php"><a href="files/src-entity-player.html"><abbr title="src/Entity/Player.php">Player.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Player constructor.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
-    
+        <section class="phpdocumentor-description"><p>Initializes the player with an empty hand of cards.</p>
+</section>
+
     
     
 
@@ -287,11 +296,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Player.php"><a href="files/src-entity-player.html"><abbr title="src/Entity/Player.php">Player.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the player&#039;s hand of cards.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getHand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/App-Entity-CardHand.html"><abbr title="\App\Entity\CardHand">CardHand</abbr></a></span></code>
@@ -305,6 +315,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><a href="classes/App-Entity-CardHand.html"><abbr title="\App\Entity\CardHand">CardHand</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The player's hand of cards.</p>
+</section>
+
             </section>
 
 </article>
@@ -322,11 +336,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Bank.php"><a href="files/src-entity-bank.html"><abbr title="src/Entity/Bank.php">Bank.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The bank plays its turn by drawing cards from the deck until its hand value reaches at least 17.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">play</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Entity-DeckOfCards.html"><abbr title="\App\Entity\DeckOfCards">DeckOfCards</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deck</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$logger</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -341,14 +356,18 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Entity-DeckOfCards.html"><abbr title="\App\Entity\DeckOfCards">DeckOfCards</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The deck of cards to draw from.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$logger</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The logger to log actions such as drawing cards.</p>
+</section>
+
             </dd>
             </dl>
 
