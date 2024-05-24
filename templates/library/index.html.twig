@@ -1,0 +1,37 @@
+{# templates/library/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Library{% endblock %}
+
+{% block body %}
+    <h1>Library</h1>
+    <a href="{{ path('library_add') }}">Add a Book</a>
+    <a href="{{ path('library_reset') }}" class="btn btn-warning">Reset Library</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Author</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.isbn }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>
+                        <a href="{{ path('library_details', {'id': book.id}) }}">Show</a>
+                        <a href="{{ path('library_edit', {'id': book.id}) }}">Edit</a>
+                        <form method="post" action="{{ path('library_delete', {'id': book.id}) }}" style="display:inline-block">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ book.id) }}">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

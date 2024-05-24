@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Book{% endblock %}
+
+{% block body %}
+    <h1>Book</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ book.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ book.title }}</td>
+            </tr>
+            <tr>
+                <th>ISBN</th>
+                <td>{{ book.isbn }}</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>{{ book.author }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{ asset(book.image) }}" alt="{{ book.title }}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('library_home') }}">Back</a>
+
+    <a href="{{ path('library_edit', {'id': book.id}) }}">Edit</a>
+
+    <form method="post" action="{{ path('library_delete', {'id': book.id}) }}" style="display:inline-block">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ book.id) }}">
+        <button type="submit">Delete</button>
+    </form>
+{% endblock %}

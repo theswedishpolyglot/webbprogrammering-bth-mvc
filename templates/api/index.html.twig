@@ -18,5 +18,21 @@
             </form>
         </li>
         <li><a href="{{ path('api_game') }}" target="_blank">Game 21</a> - Retrieves the current game state of game 21.</li>
+        <li><a href="{{ path('api_library_books') }}" target="_blank">Library Books</a> - Fetches all books in the library.</li>
+        <li>
+            <form id="isbn-form" onsubmit="searchBookByIsbn(event)">
+                <label for="isbn">Library Book by ISBN:</label>
+                <input type="text" id="isbn" name="isbn" required>
+                <button type="submit">Search</button>
+            </form>
+        </li>
     </ul>
+
+    <script>
+        function searchBookByIsbn(event) {
+            event.preventDefault();
+            const isbn = document.getElementById('isbn').value;
+            window.open(`/api/library/book/${isbn}`, '_blank');
+        }
+    </script>
 {% endblock %}
