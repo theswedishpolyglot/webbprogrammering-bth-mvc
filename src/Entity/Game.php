@@ -118,7 +118,7 @@ class Game
     /**
      * Converts the game state to an array.
      *
-     * @return array The game state as an array.
+     * @return array<string, array<array<string, mixed>>> The game state as an array.
      */
     public function toArray(): array
     {

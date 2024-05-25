@@ -124,8 +124,14 @@ class GameTest extends TestCase
     public function testFromArray(): void
     {
         $data = $this->game->toArray();
+        $expectedData = [
+            'player' => array_map(fn($card) => $card->toArray(), $this->game->getPlayer()->getHand()->getCards()->toArray()),
+            'bank' => array_map(fn($card) => $card->toArray(), $this->game->getBank()->getHand()->getCards()->toArray()),
+            'deck' => array_map(fn($card) => $card->toArray(), $this->game->getDeck()->getCards()->toArray())
+        ];
+        
         $gameFromData = new Game(new Player(), new Bank(), new DeckOfCards(), new NullLogger());
-        $gameFromData->fromArray($data, new NullLogger());
+        $gameFromData->fromArray($expectedData, new NullLogger());
 
         $this->assertEquals($this->game->toArray(), $gameFromData->toArray());
     }

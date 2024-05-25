@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716627348">
-  <project timestamp="1716627348">
+<coverage generated="1716644797">
+  <project timestamp="1716644797">
     <file name="/home/dbwebb-kurser/mvc_new/me/report/src/Controller/AboutController.php">
       <class name="App\Controller\AboutController" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
@@ -370,6 +370,14 @@
       <line num="18" type="stmt" count="0"/>
       <metrics loc="22" ncloc="22" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
     </file>
+    <file name="/home/dbwebb-kurser/mvc_new/me/report/src/Controller/MetricsController.php">
+      <class name="App\Controller\MetricsController" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="11" type="method" name="index" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <metrics loc="17" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
     <file name="/home/dbwebb-kurser/mvc_new/me/report/src/Controller/ReportController.php">
       <class name="App\Controller\ReportController" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
@@ -542,12 +550,12 @@
       <line num="31" type="stmt" count="10"/>
       <line num="32" type="stmt" count="10"/>
       <line num="33" type="stmt" count="10"/>
-      <line num="41" type="method" name="getPlayer" visibility="public" complexity="1" crap="1" count="5"/>
-      <line num="43" type="stmt" count="5"/>
-      <line num="51" type="method" name="getBank" visibility="public" complexity="1" crap="1" count="5"/>
-      <line num="53" type="stmt" count="5"/>
-      <line num="61" type="method" name="getDeck" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="63" type="stmt" count="1"/>
+      <line num="41" type="method" name="getPlayer" visibility="public" complexity="1" crap="1" count="6"/>
+      <line num="43" type="stmt" count="6"/>
+      <line num="51" type="method" name="getBank" visibility="public" complexity="1" crap="1" count="6"/>
+      <line num="53" type="stmt" count="6"/>
+      <line num="61" type="method" name="getDeck" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="63" type="stmt" count="2"/>
       <line num="71" type="method" name="playerDrawCard" visibility="public" complexity="2" crap="2" count="1"/>
       <line num="73" type="stmt" count="1"/>
       <line num="74" type="stmt" count="1"/>
@@ -562,30 +570,30 @@
       <line num="102" type="stmt" count="2"/>
       <line num="103" type="stmt" count="2"/>
       <line num="105" type="stmt" count="1"/>
-      <line num="117" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="119" type="stmt" count="2"/>
-      <line num="120" type="stmt" count="2"/>
-      <line num="121" type="stmt" count="2"/>
-      <line num="122" type="stmt" count="2"/>
-      <line num="123" type="stmt" count="2"/>
-      <line num="137" type="method" name="fromArray" visibility="public" complexity="4" crap="4.03" count="1"/>
-      <line num="139" type="stmt" count="1"/>
-      <line num="140" type="stmt" count="1"/>
-      <line num="141" type="stmt" count="1"/>
-      <line num="142" type="stmt" count="1"/>
-      <line num="144" type="stmt" count="1"/>
+      <line num="123" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="125" type="stmt" count="2"/>
+      <line num="126" type="stmt" count="2"/>
+      <line num="127" type="stmt" count="2"/>
+      <line num="128" type="stmt" count="2"/>
+      <line num="129" type="stmt" count="2"/>
+      <line num="143" type="method" name="fromArray" visibility="public" complexity="4" crap="4.03" count="1"/>
+      <line num="145" type="stmt" count="1"/>
       <line num="146" type="stmt" count="1"/>
       <line num="147" type="stmt" count="1"/>
-      <line num="148" type="stmt" count="0"/>
-      <line num="151" type="stmt" count="1"/>
+      <line num="148" type="stmt" count="1"/>
+      <line num="150" type="stmt" count="1"/>
       <line num="152" type="stmt" count="1"/>
-      <line num="153" type="stmt" count="0"/>
-      <line num="156" type="stmt" count="1"/>
+      <line num="153" type="stmt" count="1"/>
+      <line num="154" type="stmt" count="0"/>
       <line num="157" type="stmt" count="1"/>
       <line num="158" type="stmt" count="1"/>
-      <line num="159" type="stmt" count="1"/>
-      <line num="161" type="stmt" count="1"/>
-      <metrics loc="164" ncloc="101" classes="1" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="37" elements="48" coveredelements="45"/>
+      <line num="159" type="stmt" count="0"/>
+      <line num="162" type="stmt" count="1"/>
+      <line num="163" type="stmt" count="1"/>
+      <line num="164" type="stmt" count="1"/>
+      <line num="165" type="stmt" count="1"/>
+      <line num="167" type="stmt" count="1"/>
+      <metrics loc="170" ncloc="102" classes="1" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="37" elements="48" coveredelements="45"/>
     </file>
     <file name="/home/dbwebb-kurser/mvc_new/me/report/src/Entity/Player.php">
       <class name="App\Entity\Player" namespace="global">
@@ -628,6 +636,6 @@
       <line num="16" type="stmt" count="0"/>
       <metrics loc="19" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
     </file>
-    <metrics files="19" loc="1422" ncloc="1183" classes="18" methods="86" coveredmethods="32" conditionals="0" coveredconditionals="0" statements="427" coveredstatements="111" elements="513" coveredelements="143"/>
+    <metrics files="20" loc="1445" ncloc="1201" classes="19" methods="87" coveredmethods="32" conditionals="0" coveredconditionals="0" statements="428" coveredstatements="111" elements="515" coveredelements="143"/>
   </project>
 </coverage>
