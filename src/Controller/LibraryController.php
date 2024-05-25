@@ -21,9 +21,9 @@ class LibraryController extends AbstractController
 
         if (empty($books)) {
             $defaultBooks = [
-                ['title' => 'Book 1', 'isbn' => '1234567890123', 'author' => 'Author 1', 'image' => 'path/to/image1.jpg'],
-                ['title' => 'Book 2', 'isbn' => '1234567890124', 'author' => 'Author 2', 'image' => 'path/to/image2.jpg'],
-                ['title' => 'Book 3', 'isbn' => '1234567890125', 'author' => 'Author 3', 'image' => 'path/to/image3.jpg'],
+                ['title' => 'Book 1', 'isbn' => '1234567890123', 'author' => 'Author 1', 'image' => 'image1.jpg'],
+                ['title' => 'Book 2', 'isbn' => '1234567890124', 'author' => 'Author 2', 'image' => 'image2.jpg'],
+                ['title' => 'Book 3', 'isbn' => '1234567890125', 'author' => 'Author 3', 'image' => 'image3.jpg'],
             ];
 
             foreach ($defaultBooks as $data) {
@@ -118,9 +118,9 @@ class LibraryController extends AbstractController
         }
 
         $defaultBooks = [
-            ['title' => 'Book 1', 'isbn' => '1234567890123', 'author' => 'Author 1', 'image' => 'path/to/image1.jpg'],
-            ['title' => 'Book 2', 'isbn' => '1234567890124', 'author' => 'Author 2', 'image' => 'path/to/image2.jpg'],
-            ['title' => 'Book 3', 'isbn' => '1234567890125', 'author' => 'Author 3', 'image' => 'path/to/image3.jpg'],
+            ['title' => 'Book 1', 'isbn' => '1234567890123', 'author' => 'Author 1', 'image' => 'image1.jpg'],
+            ['title' => 'Book 2', 'isbn' => '1234567890124', 'author' => 'Author 2', 'image' => 'image2.jpg'],
+            ['title' => 'Book 3', 'isbn' => '1234567890125', 'author' => 'Author 3', 'image' => 'image3.jpg'],
         ];
 
         foreach ($defaultBooks as $data) {
