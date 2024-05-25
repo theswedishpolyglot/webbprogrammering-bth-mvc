@@ -4,7 +4,9 @@
 
 {% block body %}
     <h1>Book</h1>
-
+    <div class="book-image" style="text-align: center; margin-bottom: 20px;">
+        <img src="{{ asset('images/' ~ book.image) }}" alt="{{ book.title }}" style="max-width: 200px; height: auto;">
+    </div>
     <table>
         <tbody>
             <tr>
@@ -22,10 +24,6 @@
             <tr>
                 <th>Author</th>
                 <td>{{ book.author }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td><img src="{{ asset(book.image) }}" alt="{{ book.title }}"></td>
             </tr>
         </tbody>
     </table>

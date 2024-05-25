@@ -203,7 +203,6 @@ table tbody td a:hover {
     text-decoration: underline;
 }
 
-
 @keyframes flash {
     0%, 100% { background-color: #ffcc00; }
     50% { background-color: #ff6699; }
