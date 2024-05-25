@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716584589">
-  <project timestamp="1716584589">
+<coverage generated="1716624267">
+  <project timestamp="1716624267">
     <file name="/home/dbwebb-kurser/mvc_new/me/report/src/Controller/AboutController.php">
       <class name="App\Controller\AboutController" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
@@ -599,19 +599,20 @@
     </file>
     <file name="/home/dbwebb-kurser/mvc_new/me/report/src/Form/BookType.php">
       <class name="App\Form\BookType" namespace="global">
-        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="10" coveredelements="0"/>
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="11" coveredelements="0"/>
       </class>
       <line num="13" type="method" name="buildForm" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="15" type="stmt" count="0"/>
       <line num="16" type="stmt" count="0"/>
-      <line num="17" type="stmt" count="0"/>
       <line num="18" type="stmt" count="0"/>
       <line num="19" type="stmt" count="0"/>
-      <line num="22" type="method" name="configureOptions" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="24" type="stmt" count="0"/>
-      <line num="25" type="stmt" count="0"/>
-      <line num="26" type="stmt" count="0"/>
-      <metrics loc="29" ncloc="29" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="10" coveredelements="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <line num="25" type="method" name="configureOptions" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="27" type="stmt" count="0"/>
+      <line num="28" type="stmt" count="0"/>
+      <line num="29" type="stmt" count="0"/>
+      <metrics loc="32" ncloc="32" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="11" coveredelements="0"/>
     </file>
     <file name="/home/dbwebb-kurser/mvc_new/me/report/src/Kernel.php">
       <class name="App\Kernel" namespace="global">
@@ -625,8 +626,8 @@
       </class>
       <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="16" type="stmt" count="0"/>
-      <metrics loc="44" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      <metrics loc="19" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
     </file>
-    <metrics files="19" loc="1444" ncloc="1182" classes="18" methods="86" coveredmethods="32" conditionals="0" coveredconditionals="0" statements="426" coveredstatements="111" elements="512" coveredelements="143"/>
+    <metrics files="19" loc="1422" ncloc="1183" classes="18" methods="86" coveredmethods="32" conditionals="0" coveredconditionals="0" statements="427" coveredstatements="111" elements="513" coveredelements="143"/>
   </project>
 </coverage>
