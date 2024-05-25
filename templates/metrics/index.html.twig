@@ -64,7 +64,9 @@
         I ovan analys så kopplar du dina “findings” till 6C. Använd gärna något ytterligare mättal som du finner relevant och intressant.
     </i>
     <p>
-        
+        Utifrån rapporten som indikeras att kodtäckning av enhetstester är låg och ligger på 28 %. Det är främst controller-klasser som ej har enhetstester. Vidare är buildstatus okej och kodintelligens är tillgänglig. Slutligen ges en översiktlig poäng på 10 av 10. Som PHPMetrics så är det klasser såsom LibraryController, Game, DeckOfCards och JsonApiController som indikeras ha störst komplexitet.
+        De klasser med sämst rating anses vara DeckOfCardsTest, Card, Game, CardTest, CardController, DeckOfCards osv. samtidigt som de har alla hög A-rating.
+        De huvudsakliga bristerna ligger i brist på enhetstest samt finns det vissa metoder främst i controllers såsom CardController (drawMultiple) och LibraryController som har högst CRAP Score (12).
     </p>
     <div style="display: flex; flex-wrap: wrap; gap: 10px;">
         <img src="https://scrutinizer-ci.com/g/theswedishpolyglot/webbprogrammering-bth-mvc/badges/quality-score.png?b=main" style="width: 150px; height: auto;">
@@ -109,14 +111,18 @@
     </p>
         <h3>Kan man aktivt jobba med kodkvalitet och “clean code” på detta sättet?</h3>
         <p>
-            
+            Det är väl rimligt att man kan jobba med kodkvalitet dels genom att hålla kolla på vad kvaliten faktiskt är och få tydlig information kring var det är som värst. Givet att man sedan gör någonting åt saken såklart.
         </p>
         <h3>Finns det fördelar och kanske nackdelar?</h3>
         <p>
-            
+            De flesta saker innebär en "trade-off" eller en annan. Nackdelarna är väl att man kanske optimerar för optimerandets skull (man skapar godtyckliga incitament, eller ägnar sig åt oflexibelt regelföljande kring kodkvalitet).
+            En annan nackdel är väl att vissa metrics handlar mer om sannolikhet än om en säker verklighet, såsom sannolikheten att en klass har defects/buggar och det kanske skapar mer problem än det löser ibland att refaktorisera en större klass (speciellt om det är osannolikt att den behöver ändras mycket/ofta i framtiden).
+            En fördel är väl att kodkvalitet blir lite spelifierat och man kanske får motivation att ha bra "score".
         </p>
         <h3>Ser du andra möjligheter att jobba mot “clean code”?</h3>
         <p>
-
+            Andra möjligheter kan vara att bli duktig på vad clean code är och inte är, och hålla sig till clean code och/eller regelbundet refaktorisera kod till att vara mer clean under hela processen.
+            Andra möjligheter är väl att få direkt feedback i realtid eller ej från en annan programmerare (detta är dock dyrt såklart på olika sätt).
+            Det finns också kodgranskningar som jag har läst att man gör ibland, alltså kodgranskning på teamnivå.
         </p>
 {% endblock %}
