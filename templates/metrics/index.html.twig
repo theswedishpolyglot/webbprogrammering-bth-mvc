@@ -47,8 +47,14 @@
     <h2>PHPMetrics</h2>
     <i>Skapa en rubrik “Phpmetrics” och analysera dess rapport för din kod. Använd mätvärdena för att hitta flaskhalsar och svaga punkter i din kod (minst 3 stycken). Du vill hitta kod som har förbättringspotential. Visualisera med någon representativ bild från rapporten. I ovan analys så kopplar du dina “findings” till 6C. Använd gärna något ytterligare mättal som du finner relevant och intressant.</i>
     <p>
-        
+        Rapporten indikerar att vissa moduler/klasser har förhållandevis hög komplexitet, och vissa har det på flera olika håll. Detta gäller t.ex. DeckOfCards, LibraryController, JsonApiController och Game.
+        De klasser med hög WMC-poäng t.ex. DeckOfCards och LibraryController gör förmodligen för mycket alternativt att de innehåller komplexa metoder.
+        Dessa klasser har även hög cykolomatisk komplexitet vilket innebär, om jag förstått rätt, att kontrollflödet är väl komplicerat.
+        LibraryController har vidare högst relativ systemkomplexitet vilket innebär att den är förmodligen "för stor". Detta förstärks också av att denna klass har högst risk för defects och näst högst risk för buggar.
+        Vidare är en annan svag punkt att många klasser (specifikt controllers) saknar enhetstester. Dessa problem kopplar egentligen till ett flertal av C:na såsom coverage, complexity, cohesion, coupling, CRAP och code smell.
+        Sammanfattningsvis så är stora klasser, stora/komplicerade metoder och brist på enhetstester tre huvudsakliga sårbarhetskällor i kodbasen.
     </p>
+    <img src="{{ asset('images/phpmetrics_report.png') }}" alt="PHP Metrics Report">
 
     <h2>Scrutinizer</h2>
     <i>
@@ -60,26 +66,42 @@
     <p>
         
     </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <img src="https://scrutinizer-ci.com/g/theswedishpolyglot/webbprogrammering-bth-mvc/badges/quality-score.png?b=main" style="width: 150px; height: auto;">
+        <img src="https://scrutinizer-ci.com/g/theswedishpolyglot/webbprogrammering-bth-mvc/badges/coverage.png?b=main" style="width: 150px; height: auto;">
+        <img src="https://scrutinizer-ci.com/g/theswedishpolyglot/webbprogrammering-bth-mvc/badges/build.png?b=main" style="width: 150px; height: auto;">
+        <img src="https://scrutinizer-ci.com/g/theswedishpolyglot/webbprogrammering-bth-mvc/badges/code-intelligence.svg?b=main" style="width: 150px; height: auto;">
+    </div>
 
     <h2>Förbättringar</h2>
     <i>
         Skapa en ny rubrik “Förbättringar” där du väljer minst 3 förbättringar som du vill göra med din kod (gärna fler).
-
         Exempel på förbättringar kan vara:
-
         Fixa issues
         Öka kodtäckning
         Fokusera på kvalitetsindex i Scrutinizer
         Minska komplexiteten i class/metod
         Börja med att skriva om förbättringarna, vad du tänker göra, varför du väljer dem och hur du tror det kommer påverka mätvärdena för kvalitet.
-
         Implementera sedan förbättringarna.
         Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
         Gör det tydligt hur mätvärdena såg ut innan och efter dina förbättringar.
     </i>
-    <p>
-        
-    </p>
+        <h3>Tre utvalda förbättringar</h3>
+        <p>
+            <ol>
+                <li><b>Öka kodtäkning</b> - I nuläget täcks inga controller-klasser med enhetstester och täkning är således 28 %. Jag vill i minsta fall ha något enstaka enhetstest för varje controller och att kodtäckning är över 50 %.</li>
+                <li><b>Scrutinizer issues</b> - Jag har i nuläget fyra issues enligt scrutinizer rapporten. Dessa vill jag ha ned till 0.</li>
+                <li><b>Refaktorisera LibraryController</b> - Den ska bli mindre komplex och åtminstone inte ranka högst på de olika mätvärdena.</li>
+            </ol>
+        </p>
+        <h3>Analys av nya mätvärden efter implementering av förbättringar</h3>
+        <p>
+            <ol>
+                <li><b>Öka kodtäkning</b> - </li>
+                <li><b>Scrutinizer issues</b> - </li>
+                <li><b>Refaktorisera LibraryController</b> - </li>
+            </ol>
+        </p>
 
     <h2>Discussion</h2>
     <p>
