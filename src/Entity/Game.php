@@ -105,14 +105,20 @@ class Game
         return 'Bank wins!';
     }
 
+    // /**
+    //  * Converts the game state to an array.
+    //  *
+    //  * @return array{
+    //  *     player: array<array<string, mixed>>,
+    //  *     bank: array<array<string, mixed>>,
+    //  *     deck: array<array<string, mixed>>
+    //  * } The game state as an array.
+    //  */
+
     /**
      * Converts the game state to an array.
      *
-     * @return array{
-     *     player: array<array<string, mixed>>,
-     *     bank: array<array<string, mixed>>,
-     *     deck: array<array<string, mixed>>
-     * } The game state as an array.
+     * @return array The game state as an array.
      */
     public function toArray(): array
     {
