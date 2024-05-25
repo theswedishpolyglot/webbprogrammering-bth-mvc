@@ -4,43 +4,51 @@
 
 {% block body %}
     <h1>Analys av metrics</h1>
-    <h2>Introduktion</h2>
-        <h3>7C</h3>
-        <i>Börja med en rubrik “Introduktion” där du förklarar de sex C:na och hur de kan påverka kodens kvalitet. Exemplifiera, där det passar, med några mätvärden som är kopplad till din egen kod och ge en kort förklaring av mätvärdet relaterat till kodkvalitet.</i>
-        <p>Intro till 7C:n.</p>
+    <h2>Introduktion av 7C</h2>
+    <i>Börja med en rubrik “Introduktion” där du förklarar de sju C:na och hur de kan påverka kodens kvalitet. Exemplifiera, där det passar, med några mätvärden som är kopplad till din egen kod och ge en kort förklaring av mätvärdet relaterat till kodkvalitet.</i>
+        <h3>Översikt</h3>
+        <p>Nedan följer en introduktion till de sju C:na vilka är mätvärden som man kan använda sig av vid analys och förbättring av kodkvalitet.</p>
         <h3>Codestyle</h3>
         <p>
-
+            Kodstil handlar om till vilken grad man följer stilkonventioner som kan mätas av t.ex. en linter. Från en linter kan man gå varningar och fel som fungerar som mätvärden man kan utgå ifrån och lösa för att förbättra kodkvalitet.
         </p>
         <h3>Coverage</h3>
         <p>
-
+            Kodtäckning handlar om till vilken grad ens enhetstester täcker applikationens kod. Med t.ex. PHPUnit så kan man gå täckning som en procent av hela applikationens kodbas som täcks av enhetstester.
         </p>
         <h3>Complexity</h3>
         <p>
-
+            Kodkomplexitet handlar om hur komplicerad alternativt svårförståelig kodbasen är. Hög komplexitet indikerar svårigheter vid underhållning och läsning av kod samt högre risk för buggar och svårare testning. Verktyg som PHPMetrics kan ge mått av komplexitet.
         </p>
         <h3>Cohesion</h3>
         <p>
-
+            Kohesion är ett mått på hur väl relaterade olika delar av en modul eller klass är. Hög kohesion är synonymt med att modulen eller klassen har ett avgränsat ansvarsområde och syfte.
         </p>
         <h3>Coupling</h3>
         <p>
-
+            Coupling är ett mått på hur beroende en samling kod (klass/modul) är av beroende av andra moduler och klasser.
+            Ju mer couplad kod är desto mer sidoeffekter kan kodförändringar ha, och det kan krävas mer tid och resurser att ändra i kodbasen.
+            Ett mått för coupling är antalet beroenden moduler sinsemellan. 
         </p>
         <h3>CRAP</h3>
         <p>
-
+            CRAP står för "change risk anti-patterns" och ger en indikation på hur riskabelt det är att ändra i koden/modulen/klassen. Det är ett mått på risk med andra ord.
+            Den kombinerar så kallas cyclomatisk komplexitet med kodtäckning.
+            Ju högre komplexitet och ju mindre kodtäckning desto mer "risky" är det att ändra i koden.
         </p>
         <h3>Code smell</h3>
         <p>
-
+            Slutligen har vi "kodlukt" som är spår på och indikationer på att det finns djupare problem med kodbasen.
+            Detta kan vara saker som bryter mot etablerade konventioner och grunder vilket leder till låg kodkvalitet och stor teknisk skuld i längden.
+            Exempel är duplicerad kod, stora klasser, många parameterar för klasser och metoder, bortkommenterad kod osv.
         </p>
 
 
     <h2>PHPMetrics</h2>
     <i>Skapa en rubrik “Phpmetrics” och analysera dess rapport för din kod. Använd mätvärdena för att hitta flaskhalsar och svaga punkter i din kod (minst 3 stycken). Du vill hitta kod som har förbättringspotential. Visualisera med någon representativ bild från rapporten. I ovan analys så kopplar du dina “findings” till 6C. Använd gärna något ytterligare mättal som du finner relevant och intressant.</i>
-    <p>placeholder</p>
+    <p>
+        
+    </p>
 
     <h2>Scrutinizer</h2>
     <i>
@@ -49,29 +57,34 @@
         Placera samma badges i din README.md.
         I ovan analys så kopplar du dina “findings” till 6C. Använd gärna något ytterligare mättal som du finner relevant och intressant.
     </i>
-    <p>placeholder</p>
+    <p>
+        
+    </p>
 
     <h2>Förbättringar</h2>
     <i>
         Skapa en ny rubrik “Förbättringar” där du väljer minst 3 förbättringar som du vill göra med din kod (gärna fler).
 
-Exempel på förbättringar kan vara:
+        Exempel på förbättringar kan vara:
 
-Fixa issues
-Öka kodtäckning
-Fokusera på kvalitetsindex i Scrutinizer
-Minska komplexiteten i class/metod
-Börja med att skriva om förbättringarna, vad du tänker göra, varför du väljer dem och hur du tror det kommer påverka mätvärdena för kvalitet.
+        Fixa issues
+        Öka kodtäckning
+        Fokusera på kvalitetsindex i Scrutinizer
+        Minska komplexiteten i class/metod
+        Börja med att skriva om förbättringarna, vad du tänker göra, varför du väljer dem och hur du tror det kommer påverka mätvärdena för kvalitet.
 
-Implementera sedan förbättringarna.
-Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
-Gör det tydligt hur mätvärdena såg ut innan och efter dina förbättringar.
-
+        Implementera sedan förbättringarna.
+        Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
+        Gör det tydligt hur mätvärdena såg ut innan och efter dina förbättringar.
     </i>
-    <p>placeholder</p>
+    <p>
+        
+    </p>
 
     <h2>Discussion</h2>
-    <p>placeholder</p>
+    <p>
+        
+    </p>
         <h3>Kan man aktivt jobba med kodkvalitet och “clean code” på detta sättet?</h3>
         <p>
             
