@@ -55,4 +55,14 @@ class CardHandTest extends TestCase
 
         $this->assertEquals('2 ♥, Ace ♠', $hand->__toString());
     }
+
+    public function testGetValueWithFaceCard(): void
+    {
+        $hand = new CardHand();
+        $hand->addCard(new Card('Hearts', 'King'));
+        $hand->addCard(new Card('Spades', 'Queen'));
+        $hand->addCard(new Card('Clubs', 'Jack'));
+
+        $this->assertEquals(30, $hand->getValue());
+    }
 }

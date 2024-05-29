@@ -10,6 +10,9 @@ use App\Entity\Player;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
 
+/**
+ * @SuppressWarnings("TooManyPublicMethods")
+ */
 class GameTest extends TestCase
 {
     private Game $game;
@@ -133,5 +136,21 @@ class GameTest extends TestCase
         $gameFromData->fromArray($expectedData, new NullLogger());
     
         $this->assertEquals($this->game->toArray(), $gameFromData->toArray());
-    }    
+    }
+
+    public function testFromArrayAddCardLine(): void
+    {
+        $data = [
+            'player' => [
+                ['suit' => 'Hearts', 'value' => 'Ace'],
+            ],
+            'bank' => [],
+            'deck' => [],
+        ];
+
+        $logger = new NullLogger();
+        $game = new Game(new Player(), new Bank(), new DeckOfCards(), $logger);
+        $game->fromArray($data, $logger);
+        $this->assertCount(1, $game->getPlayer()->getHand()->getCards());
+    }  
 }

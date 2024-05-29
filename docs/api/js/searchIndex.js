@@ -191,6 +191,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-LibraryController.html"
         },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryController.html#method___construct"
+        },                {
             "fqsen": "\\App\\Controller\\LibraryController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
             "summary": "",
@@ -221,10 +226,45 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-LibraryController.html#method_delete"
         },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AgetAllBooks\u0028\u0029",
+            "name": "getAllBooks",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryController.html#method_getAllBooks"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AinitializeDefaultBooks\u0028\u0029",
+            "name": "initializeDefaultBooks",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryController.html#method_initializeDefaultBooks"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AsaveBook\u0028\u0029",
+            "name": "saveBook",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryController.html#method_saveBook"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AremoveBook\u0028\u0029",
+            "name": "removeBook",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryController.html#method_removeBook"
+        },                {
             "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AresetLibrary\u0028\u0029",
             "name": "resetLibrary",
             "summary": "",
             "url": "classes/App-Controller-LibraryController.html#method_resetLibrary"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AresetAutoIncrement\u0028\u0029",
+            "name": "resetAutoIncrement",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryController.html#method_resetAutoIncrement"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003A\u0024bookRepository",
+            "name": "bookRepository",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryController.html#property_bookRepository"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003A\u0024entityManager",
+            "name": "entityManager",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryController.html#property_entityManager"
         },                {
             "fqsen": "\\App\\Controller\\LuckyController",
             "name": "LuckyController",
@@ -235,6 +275,16 @@ Search.appendIndex(
             "name": "number",
             "summary": "",
             "url": "classes/App-Controller-LuckyController.html#method_number"
+        },                {
+            "fqsen": "\\App\\Controller\\MetricsController",
+            "name": "MetricsController",
+            "summary": "",
+            "url": "classes/App-Controller-MetricsController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\MetricsController\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "",
+            "url": "classes/App-Controller-MetricsController.html#method_index"
         },                {
             "fqsen": "\\App\\Controller\\ReportController",
             "name": "ReportController",
@@ -375,11 +425,6 @@ Search.appendIndex(
             "name": "fromArray",
             "summary": "Create\u0020a\u0020Card\u0020instance\u0020from\u0020an\u0020array.",
             "url": "classes/App-Entity-Card.html#method_fromArray"
-        },                {
-            "fqsen": "\\App\\Entity\\Card\u003A\u003AfromArrayInstance\u0028\u0029",
-            "name": "fromArrayInstance",
-            "summary": "Create\u0020a\u0020Card\u0020instance\u0020from\u0020an\u0020array\u0020\u0028non\u002Dstatic,\u0020for\u0020testing\u0020purposes\u0029.",
-            "url": "classes/App-Entity-Card.html#method_fromArrayInstance"
         },                {
             "fqsen": "\\App\\Entity\\Card\u003A\u003ASUIT_SYMBOLS",
             "name": "SUIT_SYMBOLS",

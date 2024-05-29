@@ -37,6 +37,15 @@ class DeckOfCardsTest extends TestCase
         $this->assertCount(51, $deck->getCards());
     }
 
+    public function testDrawCardWhenDeckIsEmpty(): void
+    {
+        $logger = new NullLogger();
+        $deck = new DeckOfCards();
+        $deck->getCards()->clear();
+        $result = $deck->drawCard($logger);
+        $this->assertNull($result);
+    }
+
     public function testResetDeck(): void
     {
         $deck = new DeckOfCards();

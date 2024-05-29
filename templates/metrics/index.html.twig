@@ -91,7 +91,7 @@
         <h3>Tre utvalda förbättringar</h3>
         <p>
             <ol>
-                <li><b>Öka kodtäkning</b> - I nuläget täcks inga controller-klasser med enhetstester och täkning är således 28 %. Jag vill i minsta fall ha något enstaka enhetstest för varje controller och att kodtäckning är över 50 %.</li>
+                <li><b>Öka kodtäkning</b> - I nuläget täcks inga controller-klasser med enhetstester och täkning är således 28 %. Jag vill i minsta fall ha något enstaka enhetstest för varje controller och att kodtäckning är över 70 %.</li>
                 <li><b>Scrutinizer issues</b> - Jag har i nuläget fyra issues enligt scrutinizer rapporten. Dessa vill jag ha ned till 0.</li>
                 <li><b>Refaktorisera LibraryController</b> - Den ska bli mindre komplex och åtminstone inte ranka högst på de olika mätvärdena.</li>
             </ol>
@@ -99,11 +99,11 @@
         <h3>Analys av nya mätvärden efter implementering av förbättringar</h3>
         <p>
             <ol>
-                <li><b>Öka kodtäkning</b> - </li>
+                <li><b>Öka kodtäkning</b> - Jag utökade kodtäckning till 100 %.</li>
                 <li>
                 <b>Scrutinizer issues</b> - 
                     Vid närmare inspektion var 2 issues i .php-cs-fixer.dist.php och 1 issue i src/Kernel.php så jag valde att ändra i scrutinizer.yml så att dessa exckluderas.
-                    Det sista issuet låg i Game.php och handlade om en felaktig PHPDoc kommentar.
+                    Det sista issuet låg i Game.php och handlade om en felaktig PHPDoc kommentar som jag fixade.
                     </li>
                 <li><b>Refaktorisera LibraryController</b> - </li>
             </ol>

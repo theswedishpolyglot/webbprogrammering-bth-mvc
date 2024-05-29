@@ -109,15 +109,4 @@ class Card implements JsonSerializable
     {
         return new self($data['suit'], $data['value']);
     }
-
-    /**
-     * Create a Card instance from an array (non-static, for testing purposes).
-     *
-     * @param array<string, string> $data An array with 'suit' and 'value' as keys with their corresponding string values.
-     * @return self Returns an instance of Card.
-     */
-    public function fromArrayInstance(array $data): self
-    {
-        return new self($data['suit'], $data['value']);
-    }
 }

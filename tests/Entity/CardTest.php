@@ -63,11 +63,20 @@ class CardTest extends TestCase
         $this->assertEquals(['suit' => 'Clubs', 'value' => '10'], $card->toArray());
     }
 
-    public function testCardFromArray(): void
+    /**
+     * @SuppressWarnings("StaticAccess")
+     */
+    public function testFromArray(): void
     {
-        $cardArray = ['suit' => 'Spades', 'value' => '7'];
-        $card = (new Card('Hearts', 'Ace'))->fromArrayInstance($cardArray);
-        $this->assertEquals('Spades', $card->getSuit());
-        $this->assertEquals('7', $card->getValue());
+        $data = [
+            'suit' => 'Hearts',
+            'value' => 'Ace'
+        ];
+
+        $card = Card::fromArray($data);
+
+        $this->assertInstanceOf(Card::class, $card);
+        $this->assertEquals('Hearts', $card->getSuit());
+        $this->assertEquals('Ace', $card->getValue());
     }
 }
