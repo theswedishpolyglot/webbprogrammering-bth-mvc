@@ -7,6 +7,8 @@ use App\Entity\DeckOfCards;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
 
+// comment to allow new commit
+
 class BankTest extends TestCase
 {
     public function testBankPlay(): void
