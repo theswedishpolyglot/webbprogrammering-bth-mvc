@@ -194,19 +194,24 @@
             <h2>Kmom06</h2>
             <h3>Hur uppfattade du verktyget phpmetrics och fann du några särskilda bitar mer värdefulla än andra? Var det några särskilda metrics eller bilder du uppskattade?</h3>
                 <p>
-                    
+                    Jag tyckte det var intressant att man kunde få data om coupling, komplexitet osv. på det sättet.
+                    Samtidigt så tänker jag att det inte finns något som säger att en viss komplexitet är bättre än någon annan på ett sätt med tanke på att mer inkapsling och bättre läsbarhet kan innebära mer kod, mer metoder etc. vilket kan öka komplexitetsmetrics.
+                    Men det ger en indikation på vilka klasser man kan kolla närmare på och jag tänker att man därifrån kan individualisera utifrån klassen i fråga och vad man tycker är rimligt och vad som motsvarar bäst "trade off".
+                    Alltså att dessa mer objektiva metrics ger en indikation på var man kan testa mer subjektivt (t.ex. hur läsbar upplevs koden, hur lätt upplevs det att ändra i koden osv.) och sen utifrån sina subjektiva metrics bestämmer vad som är bäst att göra.
                 </p>
             <h3>Berätta hur det gick att integrera med Scrutinizer och vilken är din första känsla av verktyget och dess badges? Vilken kodtäckning och kodkvalitet fick du efter första bygget?</h3>
                 <p>
-                    
+                    Det gick bra att integrera ned Scrutinizer till att börja med men senare fick jag lite problem vid build där jag var tvungen att ändra i gitignore filen för att få med build-mappen samt databasfilen.
+                    Jag fick en bra score redan från början på kodkvalitet (10.0) men endast +20 % täckning.
+
                 </p>
             <h3>Hur är din egen syn på kodkvalitet, berätta lite om den? Tror du man kan man påvisa kodkvalitet i någon viss mån med badges eller vad tror du?</h3>
                 <p>
-                    
+                    Jag tänker väl att det ger en indikation eller sannolikhetsindikator på hur bra kodkvaliteten är utifrån de specifika saker som mäts. Men man får väl vara medveten om vad som inte mäts också, så man inte tror att verktygen mäter någonting som de egentligen inte mäter.
                 </p>
             <h3>Vilken är din TIL för detta kmom?</h3>
                 <p>
-                    
+                    TIL för detta kmom är att det finns sådana här verktyg och att det finns olika sätt att jobba med refaktorisering och förbättring av kodkvalitet och kodtäckning.
                 </p>
         </section>
 

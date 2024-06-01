@@ -55,7 +55,6 @@
         Sammanfattningsvis så är stora klasser, stora/komplicerade metoder och brist på enhetstester tre huvudsakliga sårbarhetskällor i kodbasen.
     </p>
     <img src="{{ asset('images/phpmetrics_report.png') }}" alt="PHP Metrics Report">
-
     <h2>Scrutinizer</h2>
     <i>
         Skapa en rubrik “Scrutinizer” och analysera dess rapport för din kod. Gör på samma sätt som du gjorde med Phpmetrics.
@@ -99,15 +98,26 @@
         <h3>Analys av nya mätvärden efter implementering av förbättringar</h3>
         <p>
             <ol>
-                <li><b>Öka kodtäkning</b> - Jag utökade kodtäckning till 100 %.</li>
+                <li><b>Öka kodtäkning</b> - Jag utökade kodtäckning till 100 %. Främst genom att utöka enhetstester till controllers men jag saknade några procent kodtänkning av entities också.</li>
                 <li>
                 <b>Scrutinizer issues</b> - 
                     Vid närmare inspektion var 2 issues i .php-cs-fixer.dist.php och 1 issue i src/Kernel.php så jag valde att ändra i scrutinizer.yml så att dessa exckluderas.
-                    Det sista issuet låg i Game.php och handlade om en felaktig PHPDoc kommentar som jag fixade.
+                    Det sista issuet låg i Game.php och handlade om en felaktig PHPDoc kommentar som jag fixade. Jag löste även nya issues som dök upp vid tillägg av mer test samt refaktorisering.
                     </li>
-                <li><b>Refaktorisera LibraryController</b> - </li>
+                <li><b>Refaktorisera LibraryController</b> - 
+                    I den uppdaterade/refaktoriserade LibraryController-klassen så har privata hjälpmetoder skapats för att inkapsla en del logik och förenkla kodstrukturen. 
+                    Hjälpmetoder som skapats är GetAllBooks, initializeDefaultBooks, saveBook, removeBook och resetLibrary.
+                    Dessa återanvänds flera gånger. Jag har även skapat en konstruktor för att hantera beroenden på ett bättre sätt, detta så de inte behöver upprepas på detta sätt flera gånger utan endast i början.
+                    Jag har nu även en metod för att återställa databasens automatiska inkrementeringsräknare för att underlätta vid testning (blir ett renare tillstånd vid reset).
+                    Enligt PHPMetrics rapporterna så har detta resulterat i lägre sannolikhet för bugs (från 0.42 till 0.36) samt defekter (från 1.12 till 0.89) samt lägre class cycl (från 10 till 9) samt lägre relative data complexity (från 0.51 till 0.38).
+                    Detta indikerar bättre kontrollflöde på grund av bättre inkapsling förmodligen.
+                    Samtidigt så har en del annat ökat konstigt nog. WMC från 15 till 21, relative system complexity från 361 till 729 och relative structural complexity från 361 till 729.
+                    Dessa ökningar kan bero på att det är fler metoder och fler rader kod och att det sker fler interaktioner mellan metoder eller liknande.
+                    Refaktoriseringen indikerar på fördelar och nackdelar före och efter helt enkelt.
+                </li>
             </ol>
         </p>
+    <img src="{{ asset('images/phpmetrics_report_after.png') }}" alt="PHP Metrics Report After">
 
     <h2>Discussion</h2>
         <h3>Kan man aktivt jobba med kodkvalitet och “clean code” på detta sättet?</h3>
