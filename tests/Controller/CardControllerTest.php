@@ -9,6 +9,7 @@ class CardControllerTest extends WebTestCase
     public function testIndex(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/card');
 
         $this->assertResponseIsSuccessful();
@@ -18,6 +19,7 @@ class CardControllerTest extends WebTestCase
     public function testDeck(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/card/deck');
 
         $this->assertResponseIsSuccessful();
@@ -36,6 +38,7 @@ class CardControllerTest extends WebTestCase
     public function testDrawCard(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('POST', '/card/deck/draw');
 
         $this->assertResponseIsSuccessful();
@@ -45,6 +48,7 @@ class CardControllerTest extends WebTestCase
     public function testDrawAllCards(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/card/deck/draw/multiple?number=52');
 
         $client->request('POST', '/card/deck/draw');
@@ -58,6 +62,7 @@ class CardControllerTest extends WebTestCase
     public function testDrawMoreThanAvailableCards(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/card/deck/draw/multiple?number=52');
 
         $client->request('GET', '/card/deck/draw/multiple?number=5');
@@ -71,6 +76,7 @@ class CardControllerTest extends WebTestCase
     public function testDrawMultipleCards(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/card/deck/draw/multiple?number=3');
 
         $this->assertResponseIsSuccessful();
@@ -81,6 +87,7 @@ class CardControllerTest extends WebTestCase
     public function testSessionData(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/card/session');
 
         $this->assertResponseIsSuccessful();
@@ -90,6 +97,7 @@ class CardControllerTest extends WebTestCase
     public function testDeleteSession(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('POST', '/card/session/delete');
 
         $this->assertResponseRedirects('/card');

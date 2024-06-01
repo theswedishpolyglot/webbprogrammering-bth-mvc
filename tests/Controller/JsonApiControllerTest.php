@@ -10,6 +10,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testDeck(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/api/deck');
 
         $responseContent = $client->getResponse()->getContent();
@@ -23,6 +24,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testShuffle(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('POST', '/api/deck/shuffle');
 
         $responseContent = $client->getResponse()->getContent();
@@ -36,6 +38,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testDraw(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('POST', '/api/deck/draw');
 
         $responseContent = $client->getResponse()->getContent();
@@ -50,6 +53,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testDrawMultiple(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('POST', '/api/deck/draw/3');
 
         $responseContent = $client->getResponse()->getContent();
@@ -65,6 +69,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testDrawCardsEmptyDeck(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('POST', '/api/deck/shuffle');
         for ($i = 0; $i < 52; $i++) {
             $client->request('POST', '/api/deck/draw');
@@ -85,6 +90,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testGameState(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/api/game');
 
         $responseContent = $client->getResponse()->getContent();
@@ -98,6 +104,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testGameStateExists(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/game/start');
 
         $client->request('GET', '/api/game');
@@ -115,6 +122,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testGetAllBooks(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/api/library/books');
 
         $responseContent = $client->getResponse()->getContent();
@@ -128,6 +136,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testGetBookByIsbn(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $isbn = '1234567890123';
         $client->request('GET', '/api/library/book/' . $isbn);
 
@@ -145,6 +154,7 @@ class JsonApiControllerTest extends WebTestCase
     public function testGetNonExistentBookByIsbn(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $isbn = 'nonexistentisbn';
         $client->request('GET', '/api/library/book/' . $isbn);
 

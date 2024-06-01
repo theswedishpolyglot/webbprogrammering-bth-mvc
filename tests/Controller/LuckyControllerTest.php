@@ -9,6 +9,7 @@ class LuckyControllerTest extends WebTestCase
     public function testNumber(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/lucky');
 
         $this->assertResponseIsSuccessful();

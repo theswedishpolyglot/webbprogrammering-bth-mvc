@@ -13,6 +13,7 @@ class GameControllerTest extends WebTestCase
     public function testIndex(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/game');
 
         $this->assertResponseIsSuccessful();
@@ -22,6 +23,7 @@ class GameControllerTest extends WebTestCase
     public function testDoc(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/game/doc');
 
         $this->assertResponseIsSuccessful();
@@ -49,6 +51,7 @@ class GameControllerTest extends WebTestCase
     public function testPlayRedirectsToStartIfNoGameInSession(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/game/play');
 
         $this->assertResponseRedirects('/game/start');
@@ -57,6 +60,7 @@ class GameControllerTest extends WebTestCase
     public function testDrawRedirectsToStartIfNoGameInSession(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('POST', '/game/draw');
 
         $this->assertResponseRedirects('/game/start');
@@ -65,6 +69,7 @@ class GameControllerTest extends WebTestCase
     public function testStayRedirectsToStartIfNoGameInSession(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('POST', '/game/stay');
 
         $this->assertResponseRedirects('/game/start');
@@ -73,6 +78,7 @@ class GameControllerTest extends WebTestCase
     public function testResultRedirectsToStartIfNoGameInSession(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/game/result');
 
         $this->assertResponseRedirects('/game/start');
@@ -81,6 +87,7 @@ class GameControllerTest extends WebTestCase
     public function testStartGame(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/game/start');
 
         $this->assertResponseRedirects('/game/play');

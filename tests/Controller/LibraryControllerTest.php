@@ -14,6 +14,7 @@ class LibraryControllerTest extends WebTestCase
     public function testIndex(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/library');
 
         $client->followRedirect();
@@ -25,6 +26,7 @@ class LibraryControllerTest extends WebTestCase
     public function testAdd(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/library/add');
 
         $this->assertResponseIsSuccessful();
@@ -97,6 +99,7 @@ class LibraryControllerTest extends WebTestCase
     public function testInitializeDefaultBooks(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/library/');
     
         $this->assertResponseIsSuccessful();

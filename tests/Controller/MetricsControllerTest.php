@@ -9,6 +9,7 @@ class MetricsControllerTest extends WebTestCase
     public function testIndex(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/metrics');
 
         $this->assertResponseIsSuccessful();
