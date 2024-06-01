@@ -63,7 +63,7 @@ class LibraryControllerTest extends WebTestCase
 
         $this->assertResponseRedirects('/library/');
 
-        $crawler = $client->followRedirect();
+        $client->followRedirect();
         $this->assertSelectorTextContains('td', 'Updated Title');
     }     
 
