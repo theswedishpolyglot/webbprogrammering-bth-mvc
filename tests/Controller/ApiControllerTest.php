@@ -9,6 +9,7 @@ class ApiControllerTest extends WebTestCase
     public function testIndex(): void
     {
         $client = static::createClient();
+        $client->catchExceptions(false);
         $client->request('GET', '/api');
 
         $this->assertResponseIsSuccessful();
