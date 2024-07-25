@@ -1,0 +1,42 @@
+{% extends 'proj/base.html.twig' %}
+
+{% block title %}Play Game{% endblock %}
+
+{% block body %}
+    <h1>Black Jack Session!</h1>
+    <p style="font-size: medium;">Bet Amount: {{ betAmount }}</p>
+    {% for hand in hands %}
+        <h2>Hand {{ loop.index }} (Value: {{ hand.value }})</h2>
+        <div class="card-container">
+            {% for card in hand.cards %}
+                <div class="card">
+                    {{ card }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="btn-container">
+            {% if hand.value > 21 %}
+                <p>Hand is busted.</p>
+            {% elseif hand.stayed %}
+                <p>Player has stayed!</p>
+            {% else %}
+                <form action="{{ path('proj_game_draw') }}" method="post">
+                    <input type="hidden" name="handIndex" value="{{ loop.index0 }}">
+                    <button type="submit" class="btn btn-primary">Draw Card</button>
+                </form>
+                <form action="{{ path('proj_game_stay') }}" method="post">
+                    <input type="hidden" name="handIndex" value="{{ loop.index0 }}">
+                    <button type="submit" class="btn btn-secondary">Stay</button>
+                </form>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <h2>Bank's Hand</h2>
+    <div class="card-container">
+        {% for card in bankHand.cards %}
+            <div class="card">
+                {{ card }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

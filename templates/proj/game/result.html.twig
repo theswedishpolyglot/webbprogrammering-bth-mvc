@@ -1,0 +1,37 @@
+{% extends 'proj/base.html.twig' %}
+
+{% block title %}Game Result{% endblock %}
+
+{% block body %}
+    <h1>Game Result</h1>
+    <table class="result-table">
+        <thead>
+            <tr>
+                <th>Hand</th>
+                <th>Player Value</th>
+                <th>Bank Value</th>
+                <th>Result</th>
+                <th>Winnings</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ hands[loop.index0].value }}</td>
+                    <td>{{ bankFinalScore }}</td>
+                    <td>{{ result }}</td>
+                    <td>{{ winnings[loop.index0] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Total Winnings</td>
+                <td>{{ totalWinnings }}</td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>Bank Balance: {{ bankBalance }}</p>
+    <a href="{{ path('proj_game_home') }}" class="btn btn-primary">Play Again</a>
+{% endblock %}

@@ -8,3 +8,4 @@ parameters:
         #- .phpstan.constants.php
     ignoreErrors:
         - '#Call to an undefined method object::getRepository\(\)#'
+    treatPhpDocTypesAsCertain: false

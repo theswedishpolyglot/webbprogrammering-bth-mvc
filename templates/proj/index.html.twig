@@ -1,0 +1,31 @@
+{% extends 'proj/base.html.twig' %}
+
+{% block title %}Project Home{% endblock %}
+
+{% block body %}
+    <div class="home-container">
+        <h1>Welcome to the Black Jack Card Game Project!</h1>
+        <p>Explore the different sections of this project:</p>
+
+        <div class="home-card-grid">
+            
+            <div class="home-card">
+                <h2>About</h2>
+                <p>Learn more about the Black Jack project, its rules, and features.</p>
+                <a href="{{ path('proj_about') }}" class="btn btn-primary">Go to About</a>
+            </div>
+
+            <div class="home-card">
+                <h2>Register</h2>
+                <p>Register a player by entering your name and initial bank balance to start playing.</p>
+                <a href="{{ path('proj_register') }}" class="btn btn-primary">Go to Register</a>
+            </div>
+
+            <div class="home-card">
+                <h2>Play Game</h2>
+                <p>Start playing Black Jack, place your bets, and manage your hands against the dealer.</p>
+                <a href="{{ path('proj_game_home') }}" class="btn btn-primary">Go to Play</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

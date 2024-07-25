@@ -1,0 +1,35 @@
+{% extends 'proj/base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+    <div class="about-container">
+        <h1>About Black Jack</h1>
+        <section>
+            <h2>Introduction</h2>
+            <p>Welcome to the Black Jack project! This project is a web-based implementation of the classic card game Black Jack, also known as 21. The goal of the game is to beat the dealer by having a hand value as close to 21 as possible without exceeding it. This project allows you to play 1 to 3 hands simultaneously against the dealer.</p>
+        </section>
+
+        <section>
+            <h2>How to Play</h2>
+            <p>The basic rules of Black Jack are as follows:</p>
+            <ul>
+                <li>Each player is dealt two cards, and the dealer is dealt one card face up and one card face down.</li>
+                <li>Players can choose to "hit" (draw a card) or "stay" (keep their current hand).</li>
+                <li>The goal is to get a hand value as close to 21 as possible without exceeding it. Aces can be worth 1 or 11 points, face cards are worth 10 points, and all other cards are worth their face value.</li>
+                <li>If a player's hand exceeds 21 points, they "bust" and lose the game.</li>
+                <li>After all players have finished their turns, the dealer reveals their face-down card and draws cards until their hand value is at least 17.</li>
+                <li>If the dealer busts, all remaining players win. If the dealer does not bust, the player with the hand value closest to 21 without exceeding it wins.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Project Features</h2>
+            <p>This project includes the following special features:</p>
+            <ul>
+                <li>User registration and bank balance management</li>
+                <li>Ability to place bets and manage multiple hands</li>
+            </ul>
+        </section>
+    </div>
+{% endblock %}

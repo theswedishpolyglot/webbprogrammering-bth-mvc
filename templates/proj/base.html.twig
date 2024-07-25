@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Project{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/proj/styles.css') }}">
+        {{ encore_entry_link_tags('proj') }}
+    </head>
+    <body>
+        <header>
+            <h1>Black Jack</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ path('home') }}">Back</a></li>
+                    <li><a href="{{ path('proj_home') }}">Home</a></li>
+                    <li><a href="{{ path('proj_about') }}">About</a></li>
+                    <li><a href="{{ path('proj_register') }}">Register</a></li>
+                    <li><a href="{{ path('proj_game_home') }}">Play</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                {% block body %}{% endblock %}
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Black Jack</p>
+        </footer>
+        {{ encore_entry_script_tags('proj') }}
+    </body>
+</html>

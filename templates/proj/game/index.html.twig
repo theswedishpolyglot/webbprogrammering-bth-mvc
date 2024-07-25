@@ -1,0 +1,15 @@
+{% extends 'proj/base.html.twig' %}
+
+{% block title %}Game Home{% endblock %}
+
+{% block body %}
+    <div class="game-container">
+        <h1>Welcome to Black Jack, {{ playerName }}</h1>
+        <p>Your Bank Balance: {{ bankBalance }}</p>
+        <div class="form-container">
+            {{ form_start(form, { 'action': path('proj_game_start'), 'method': 'POST' }) }}
+                {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
