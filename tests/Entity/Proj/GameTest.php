@@ -48,16 +48,18 @@ class GameTest extends TestCase
 
     public function testPlayerDrawCard(): void
     {
-        $this->game->playerDrawCard(0);
-        $hands = $this->game->getPlayerHands();
+        $game = new Game(new Player(), new Bank(), new DeckOfCards(), new NullLogger(), 1, 10);
+        $game->playerDrawCard(0);
+        $hands = $game->getPlayerHands();
         $this->assertNotNull($hands[0]);
         $this->assertCount(1, $hands[0]->getCards());
     }
 
     public function testBankPlay(): void
     {
-        $this->game->bankPlay();
-        $this->assertGreaterThanOrEqual(17, $this->game->getBank()->getHand()->getValue());
+        $game = new Game(new Player(), new Bank(), new DeckOfCards(), new NullLogger(), 1, 10);
+        $game->bankPlay();
+        $this->assertGreaterThanOrEqual(17, $game->getBank()->getHand()->getValue());
     }
 
     public function testBankWinsPlayerBusts(): void
@@ -139,16 +141,13 @@ class GameTest extends TestCase
         ];
     
         $logger = new NullLogger();
-        $game = new Game(new Player(), new Bank(), new DeckOfCards(), $logger);
+        $game = new Game(new Player(), new Bank(), new DeckOfCards(), $logger, 1, 10);
         $game->fromArray($data, $logger);
     
         $bankHand = $game->getBank()->getHand();
-        $this->assertNotNull($bankHand);
         $this->assertCount(2, $bankHand->getCards());
-        $this->assertNotNull($bankHand->getCards()[0]);
         $this->assertEquals('Ace', $bankHand->getCards()[0]->getValue());
         $this->assertEquals('Spades', $bankHand->getCards()[0]->getSuit());
-        $this->assertNotNull($bankHand->getCards()[1]);
         $this->assertEquals('King', $bankHand->getCards()[1]->getValue());
         $this->assertEquals('Diamonds', $bankHand->getCards()[1]->getSuit());
     }
