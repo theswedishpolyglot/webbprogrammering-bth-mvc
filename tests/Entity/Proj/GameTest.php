@@ -4,6 +4,7 @@ namespace App\Tests\Proj\Entity;
 
 use App\Entity\Proj\Bank;
 use App\Entity\Proj\Card;
+use App\Entity\Proj\CardHand;
 use App\Entity\Proj\DeckOfCards;
 use App\Entity\Proj\Game;
 use App\Entity\Proj\Player;
