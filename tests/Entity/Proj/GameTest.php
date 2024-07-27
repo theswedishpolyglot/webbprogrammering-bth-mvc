@@ -49,13 +49,23 @@ class GameTest extends TestCase
 
     public function testPlayerDrawCard(): void
     {
-        $game = new Game(new Player(), new Bank(), new DeckOfCards(), new NullLogger(), 1, 10);
-        $game->getPlayerHands()->clear();
-        $game->getPlayerHands()->add(new CardHand());
+        $player = new Player();
+        $bank = new Bank();
+        $deck = new DeckOfCards();
+        $logger = new NullLogger();
+
+        $this->assertCount(52, $deck->getCards(), 'Deck should start with 52 cards.');
+        $game = new Game($player, $bank, $deck, $logger, 2, 10);
         $game->playerDrawCard(0);
-        $hands = $game->getPlayerHands();
-        $this->assertNotNull($hands[0]);
-        $this->assertCount(1, $hands[0]->getCards());
+        $playerHands = $game->getPlayerHands();
+        $this->assertCount(1, $playerHands[0]->getCards(), 'Player hand 0 should have 1 card.');
+        $this->assertCount(51, $deck->getCards(), 'Deck should have 51 cards after one draw.');
+        $drawnCard = $playerHands[0]->getCards()->first();
+        $this->assertNotNull($drawnCard, 'Drawn card should not be null.');
+        $this->assertNotContains($drawnCard, $deck->getCards()->toArray(), 'Drawn card should not be in the deck.');
+        $game->playerDrawCard(1);
+        $this->assertCount(1, $playerHands[1]->getCards(), 'Player hand 1 should have 1 card.');
+        $this->assertCount(50, $deck->getCards(), 'Deck should have 50 cards after two draws.');
     }
 
     public function testBankPlay(): void
