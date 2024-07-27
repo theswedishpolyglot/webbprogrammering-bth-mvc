@@ -48,7 +48,7 @@ class GameTest extends TestCase
 
     public function testPlayerDrawCard(): void
     {
-        $game = new Game(new Player(), new Bank(), new DeckOfCards(), new NullLogger(), 1, 10);
+        $game = new Game(new Player(), new Bank(), new DeckOfCards(), new NullLogger(), 2, 10);
         $game->playerDrawCard(0);
         $hands = $game->getPlayerHands();
         $this->assertNotNull($hands[0]);
