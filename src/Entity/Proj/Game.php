@@ -54,10 +54,13 @@ class Game
     public function playerDrawCard(int $handIndex): void
     {
         $card = $this->deck->drawCard($this->logger);
-        if ($card && isset($this->playerHands[$handIndex])) {
-            $this->playerHands[$handIndex]->addCard($card);
+        $hand = $this->playerHands->get($handIndex);
+
+        if ($card && $hand !== null) {
+            $hand->addCard($card);
         }
     }
+
 
     public function bankPlay(): void
     {

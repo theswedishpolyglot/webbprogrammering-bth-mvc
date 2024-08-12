@@ -53,23 +53,30 @@ class GameTest extends TestCase
         $bank = new Bank();
         $deck = new DeckOfCards();
         $logger = new NullLogger();
-        
+
         $this->assertCount(52, $deck->getCards(), 'Deck should start with 52 cards.');
         $game = new Game($player, $bank, $deck, $logger, 2, 10);
         $playerHands = $game->getPlayerHands();
         $this->assertCount(2, $playerHands, 'There should be 2 player hands.');
+
+        // First hand
         $game->playerDrawCard(0);
-        $this->assertNotNull($playerHands[0], 'Player hand 0 should not be null.');
-        $this->assertInstanceOf(CardHand::class, $playerHands[0], 'Player hand 0 should be an instance of CardHand.');
-        $this->assertCount(1, $playerHands[0]->getCards(), 'Player hand 0 should have 1 card.');
+        $playerHand0 = $playerHands->get(0);
+        $this->assertNotNull($playerHand0, 'Player hand 0 should not be null.');
+        $this->assertInstanceOf(CardHand::class, $playerHand0, 'Player hand 0 should be an instance of CardHand.');
+        $this->assertCount(1, $playerHand0->getCards(), 'Player hand 0 should have 1 card.');
         $this->assertCount(51, $deck->getCards(), 'Deck should have 51 cards after one draw.');
-        $drawnCard = $playerHands[0]->getCards()->first();
+
+        $drawnCard = $playerHand0->getCards()->first();
         $this->assertNotNull($drawnCard, 'Drawn card should not be null.');
         $this->assertNotContains($drawnCard, $deck->getCards()->toArray(), 'Drawn card should not be in the deck.');
+
+        // Second hand
         $game->playerDrawCard(1);
-        $this->assertNotNull($playerHands[1], 'Player hand 1 should not be null.');
-        $this->assertInstanceOf(CardHand::class, $playerHands[1], 'Player hand 1 should be an instance of CardHand.');
-        $this->assertCount(1, $playerHands[1]->getCards(), 'Player hand 1 should have 1 card.');
+        $playerHand1 = $playerHands->get(1);
+        $this->assertNotNull($playerHand1, 'Player hand 1 should not be null.');
+        $this->assertInstanceOf(CardHand::class, $playerHand1, 'Player hand 1 should be an instance of CardHand.');
+        $this->assertCount(1, $playerHand1->getCards(), 'Player hand 1 should have 1 card.');
         $this->assertCount(50, $deck->getCards(), 'Deck should have 50 cards after two draws.');
     }
 
@@ -161,13 +168,20 @@ class GameTest extends TestCase
         $logger = new NullLogger();
         $game = new Game(new Player(), new Bank(), new DeckOfCards(), $logger, 1, 10);
         $game->fromArray($data, $logger);
-    
+
         $bankHand = $game->getBank()->getHand();
         $this->assertCount(2, $bankHand->getCards());
-        $this->assertEquals('Ace', $bankHand->getCards()[0]->getValue());
-        $this->assertEquals('Spades', $bankHand->getCards()[0]->getSuit());
-        $this->assertEquals('King', $bankHand->getCards()[1]->getValue());
-        $this->assertEquals('Diamonds', $bankHand->getCards()[1]->getSuit());
+
+        $firstCard = $bankHand->getCards()->get(0);
+        $secondCard = $bankHand->getCards()->get(1);
+
+        $this->assertNotNull($firstCard, 'First card should not be null.');
+        $this->assertEquals('Ace', $firstCard->getValue());
+        $this->assertEquals('Spades', $firstCard->getSuit());
+
+        $this->assertNotNull($secondCard, 'Second card should not be null.');
+        $this->assertEquals('King', $secondCard->getValue());
+        $this->assertEquals('Diamonds', $secondCard->getSuit());
     }
 
     public function testAllPlayersDone(): void
